@@ -1,0 +1,91 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/reset";
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1600 * 10);
+
+  // @include breakpoint($xl-bp) {
+  //   font-size: calc(100vw / 1600 * 10);
+  // }
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 1385 * 10);
+  }
+  @include breakpoint($lg-bp) {
+    font-size: calc(100vw / 830 * 10);
+  }
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.38;
+  color: $primary;
+
+  background-color: white;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+  }
+}
+
+main {
+  // padding-top: 9.6rem;
+}
+
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+svg {
+  transition: all 0.2s ease;
+}
+
+/* Vendors */
+
+@import "vendor/splide.scss";
+
+/* Blocks */
+
+@import "blocks/page";
+@import "blocks/waves.scss";
+@import "blocks/section.scss";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/hollow-btn.scss";
+
+@import "blocks/intro.scss";
+@import "blocks/popular.scss";
+
+@import "blocks/footer";
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

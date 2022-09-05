@@ -1,0 +1,150 @@
+.intro {
+  position: relative;
+
+  height: 92rem;
+}
+
+.intro-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.ibg-chups {
+    background-image: url(../images/intro/chupa-chups/chupa-chups-bg.png);
+  }
+  &.ibg-cola {
+    background-image: url(../images/intro/cola/cola-bg.png);
+  }
+}
+
+.intro__inner {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  margin-left: 20rem;
+}
+
+.intro-content {
+  width: 100%;
+  max-width: 57.2rem;
+
+  margin-top: 19rem;
+}
+
+.intro__title {
+  font-family: "Pribambas";
+  font-weight: 400;
+  font-size: 7.4rem;
+  line-height: 0.95;
+  color: white;
+
+  margin-bottom: 4.5rem;
+}
+
+.intro__subtitle {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: white;
+
+  margin-bottom: 5.3rem;
+}
+
+.intro-slider {
+  width: 100%;
+  height: 100%;
+
+  .splide__track {
+    height: 100%;
+  }
+}
+
+.intro-item {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 11rem;
+}
+
+.intro-item__bottle {
+  width: 100%;
+  max-width: 41rem;
+
+  z-index: 10;
+
+  transform: rotate(12.41deg);
+}
+
+.ii-chups {
+}
+
+.chups-liquid {
+  width: 96rem;
+  height: auto;
+
+  position: absolute;
+  left: 0;
+  top: -10rem;
+  z-index: 1;
+}
+
+.star-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 19.3rem;
+  height: 19.3rem;
+
+  p {
+    z-index: 2;
+
+    width: 100%;
+    max-width: 10.4rem;
+
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+
+    transform: rotate(-15deg);
+    transition: inherit;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    stroke: white;
+    fill: transparent;
+  }
+
+  &:hover {
+    p {
+      color: $primary;
+    }
+    svg {
+      fill: white;
+    }
+  }
+}
