@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg"    
+     width="86" height="86" viewBox="0 0 86 86" >  
+    <circle cx="43" cy="43" r="40" fill="none" stroke="white" stroke-width="3" stroke-opacity="0.3" />
+            <circle cx="43" cy="43" r="40" transform="rotate(-90 43 43)" fill="none" stroke-dashoffset="251"
+                stroke-dasharray="251" stroke="white" stroke-width="3">
+                <animate attributeName="stroke-dashoffset" dur="4s" values="251;0" fill="freeze" begin="indefinite" />
+            </circle>
+      
+</svg>  

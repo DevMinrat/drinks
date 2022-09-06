@@ -64,6 +64,7 @@
 
   .splide__track {
     height: 100%;
+    overflow: visible;
   }
 }
 
@@ -74,8 +75,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding-top: 11rem;
 }
 
 .intro-item__bottle {
@@ -85,19 +84,6 @@
   z-index: 10;
 
   transform: rotate(12.41deg);
-}
-
-.ii-chups {
-}
-
-.chups-liquid {
-  width: 96rem;
-  height: auto;
-
-  position: absolute;
-  left: 0;
-  top: -10rem;
-  z-index: 1;
 }
 
 .star-link {
@@ -147,4 +133,219 @@
       fill: white;
     }
   }
+}
+
+// parallax
+
+.layer {
+  position: absolute !important;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.layer-elem {
+  position: absolute;
+
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.intro-slider .splide__slide:not(.is-active) {
+  .mango-sm,
+  .ice-sm {
+    transform: translate(50vw, -50vh);
+    opacity: 0;
+  }
+  .mango-md,
+  .ice-md {
+    transform: translate(-50vw, -50vh);
+    opacity: 0;
+  }
+  .mango-big,
+  .ice-big {
+    transform: translate(50vw, 50vh);
+    opacity: 0;
+  }
+  .drops {
+    transform: translate(-50vw, 50vh);
+    opacity: 0;
+  }
+}
+
+.mango-sm {
+  width: 22.4rem;
+  height: 24.6rem;
+
+  top: 30%;
+  left: 60%;
+
+  background: url(../images/intro/chupa-chups/mango-sm.png) no-repeat;
+  background-size: cover;
+}
+
+.mango-md {
+  width: 28rem;
+  height: 29.6rem;
+
+  top: 29%;
+  left: 8%;
+
+  background: url(../images/intro/chupa-chups/mango-md.png) no-repeat;
+  background-size: cover;
+}
+
+.mango-big {
+  width: 42.9rem;
+  height: 53.3rem;
+
+  top: 35%;
+  left: 63%;
+
+  background: url(../images/intro/chupa-chups/mango-big.png) no-repeat;
+  background-size: cover;
+}
+
+.drops {
+  width: 25.1rem;
+  height: 23.1rem;
+
+  top: 58%;
+  left: 10%;
+
+  background: url(../images/intro/chupa-chups/drops.png) no-repeat;
+  background-size: cover;
+}
+
+.chups-liquid {
+  width: 92rem;
+  height: auto;
+
+  position: absolute;
+  left: 0;
+  top: -10rem;
+  z-index: 1;
+}
+
+.smoke-big {
+  width: 108.4rem;
+  height: 92rem;
+
+  top: -27%;
+  left: -20%;
+
+  background: url(../images/intro/cola/big-smoke.png) no-repeat;
+  background-size: cover;
+}
+.smoke-sm {
+  width: 76.2rem;
+  height: 80rem;
+
+  top: 10%;
+  left: -10%;
+
+  background: url(../images/intro/cola/sm-smoke.png) no-repeat;
+  background-size: cover;
+}
+.ice-sm {
+  width: 15.4rem;
+  height: 22rem;
+
+  top: 7%;
+  left: 64%;
+
+  background: url(../images/intro/cola/sm-ice.png) no-repeat;
+  background-size: cover;
+}
+.ice-md {
+  width: 31.9rem;
+  height: 67.2rem;
+
+  top: 13%;
+  left: -10%;
+
+  background: url(../images/intro/cola/double-ice.png) no-repeat;
+  background-size: cover;
+}
+.ice-big {
+  width: 13.1rem;
+  height: 37.2rem;
+
+  top: 54%;
+  left: 87%;
+
+  background: url(../images/intro/cola/big-ice.png) no-repeat;
+  background-size: cover;
+}
+
+.l1 {
+  z-index: 1;
+}
+.l2 {
+  z-index: 2;
+}
+.l3 {
+  z-index: 3;
+}
+.l4 {
+  z-index: 4;
+}
+.l5 {
+  z-index: 5;
+}
+.l6 {
+  z-index: 6;
+}
+
+.intro-slider__navs {
+  position: absolute;
+  top: 84%;
+  left: 60%;
+  z-index: 22;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.is-nav__item {
+  position: relative;
+  width: 8.6rem;
+  height: 8.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &.active {
+    .icon-nav-circle {
+      display: block;
+    }
+    .is-nav__item-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.icon-nav-circle {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+}
+
+.is-nav__item-icon {
+  width: 6.8rem;
+  height: 6.8rem;
+
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
 }

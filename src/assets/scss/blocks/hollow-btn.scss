@@ -17,6 +17,10 @@
 
   transition: all 0.2s ease;
 
+  svg {
+    margin-left: 0.6rem;
+  }
+
   &:hover {
     color: white;
 
@@ -25,6 +29,7 @@
 
     svg {
       fill: white;
+      margin-left: 1.6rem;
     }
   }
 }
