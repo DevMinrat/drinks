@@ -1,8 +1,10 @@
 .popular {
+  position: relative;
+
   padding-top: 22rem;
 
-  background: url(../images/popular/pop-bg.png) no-repeat;
-  background-size: cover;
+  background: url(../images/popular/pop-bg.svg) no-repeat;
+  background-size: 100% 256rem;
 
   .section-title {
     margin-bottom: 1.2rem;

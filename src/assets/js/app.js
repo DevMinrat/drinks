@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // intro slider
 
   const introSliderEl = document.querySelector(".intro-slider");
+  const introBg = document.querySelector(".intro-bg");
 
   const introSlider = new Splide(".splide", {
     type: "fade",
@@ -57,34 +58,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const iSliderNavItems = document.querySelectorAll(".is-nav__item");
   const inc = document.querySelectorAll(".icon-nav-circle");
 
+  function setIntroBg(idx) {
+    switch (idx) {
+      case 0:
+        introBg.classList.add("ibg-chups");
+        introBg.classList.remove("ibg-cola", "ibg-fanta", "ibg-pepper");
+        break;
+      case 1:
+        introBg.classList.add("ibg-cola");
+        introBg.classList.remove("ibg-chups", "ibg-fanta", "ibg-pepper");
+        break;
+      case 2:
+        introBg.classList.add("ibg-fanta");
+        introBg.classList.remove("ibg-cola", "ibg-chups", "ibg-pepper");
+        break;
+      case 3:
+        introBg.classList.add("ibg-pepper");
+        introBg.classList.remove("ibg-cola", "ibg-fanta", "ibg-chups");
+        break;
+      default:
+        break;
+    }
+  }
+
   function setActiveNavItem(idx) {
     iSliderNavItems.forEach((el) => {
       el.classList.remove("active");
     });
     iSliderNavItems[idx].classList.add("active");
   }
-  setActiveNavItem(0);
 
   function animateNavCircleSvg(idx) {
     let currentAnimate = inc[idx].querySelector("animate");
-    console.log(currentAnimate);
     currentAnimate.beginElement();
   }
-  animateNavCircleSvg(0);
 
   iSliderNavItems.forEach((el, idx) => {
     el.addEventListener("click", (e) => {
+      setIntroBg(idx);
       introSlider.go(idx);
       if (!el.classList.contains("active")) {
         animateNavCircleSvg(idx);
-        // inc[idx].unpauseAnimations();
       }
     });
   });
 
+  function onInitIntroSlider(idx) {
+    setIntroBg(idx);
+    setActiveNavItem(idx);
+    animateNavCircleSvg(idx);
+  }
+
+  onInitIntroSlider(0);
+
   introSlider.on("moved", function (idx) {
     animateNavCircleSvg(idx);
     setActiveNavItem(idx);
+    setIntroBg(idx);
   });
 
   introSliderEl.addEventListener("mouseenter", () => {
@@ -118,4 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
       animatePopBubbleSvg();
     });
   });
+
+  // parallax benefits
+
+  const benefitsContent = document.querySelector(".benefits-content");
+
+  const benefitsParallax = new Parallax(benefitsContent);
 });

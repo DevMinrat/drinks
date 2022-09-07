@@ -17,10 +17,16 @@
   background-size: cover;
 
   &.ibg-chups {
-    background-image: url(../images/intro/chupa-chups/chupa-chups-bg.png);
+    background-image: url(../images/intro/chupa-chups/chupa-chups-bg.jpg);
   }
   &.ibg-cola {
-    background-image: url(../images/intro/cola/cola-bg.png);
+    background-image: url(../images/intro/cola/cola-bg.jpg);
+  }
+  &.ibg-fanta {
+    background-image: url(../images/intro/chupa-chups/chupa-chups-bg.jpg);
+  }
+  &.ibg-pepper {
+    background-image: url(../images/intro/cola/cola-bg.jpg);
   }
 }
 

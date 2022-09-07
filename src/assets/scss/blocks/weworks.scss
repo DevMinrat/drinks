@@ -1,0 +1,85 @@
+.weworks {
+  position: relative;
+
+  padding: 15rem 0 20rem;
+
+  .section-title {
+    margin-bottom: 3.6rem;
+  }
+
+  .raspberry {
+    position: absolute;
+    left: 6.7rem;
+    top: 7rem;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 19.6rem;
+  }
+  .strawberry {
+    position: absolute;
+    right: 6.7rem;
+    bottom: -8rem;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 19.6rem;
+  }
+}
+
+.weworks__inner {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.6rem 4rem;
+  justify-content: center;
+}
+
+.weworks-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 31.4rem;
+  height: 31.4rem;
+
+  padding-top: 7.4rem;
+
+  border: 0.1rem solid #aaa6c2;
+  border-radius: 50%;
+  background-color: transparent;
+
+  transition: all 0.2s ease;
+
+  &:last-child {
+    margin-left: 10rem;
+  }
+
+  &:hover {
+    background-color: $primary;
+
+    .weworks-item__icon {
+      fill: white;
+    }
+    .weworks-item__descr {
+      font-weight: 700;
+      color: white;
+    }
+  }
+}
+
+.weworks-item__icon {
+  width: 9rem;
+  height: 9rem;
+
+  fill: #aaa6c2;
+
+  margin-bottom: 1.6rem;
+}
+
+.weworks-item__descr {
+  font-size: 2.2rem;
+  color: $primary;
+
+  transition: inherit;
+}
