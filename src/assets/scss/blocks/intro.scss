@@ -1,7 +1,7 @@
 .intro {
   position: relative;
 
-  height: 92rem;
+  height: 100vh;
 }
 
 .intro-bg {
@@ -43,7 +43,8 @@
   width: 100%;
   max-width: 57.2rem;
 
-  margin-top: 19rem;
+  // margin-top: 19rem;
+  margin-top: 20vh;
 }
 
 .intro__title {
@@ -85,11 +86,22 @@
 
 .intro-item__bottle {
   width: 100%;
-  max-width: 41rem;
+  // max-width: 41rem;
+  max-width: 40vh;
 
   z-index: 10;
 
-  transform: rotate(12.41deg);
+  transform: rotate(12deg);
+  animation: animateBottle 6s ease infinite alternate;
+}
+
+@keyframes animateBottle {
+  0% {
+    transform: translate(0rem, 0rem) rotate(12deg);
+  }
+  100% {
+    transform: translate(1rem, 1rem) rotate(14deg);
+  }
 }
 
 .star-link {
@@ -181,8 +193,10 @@
 }
 
 .mango-sm {
-  width: 22.4rem;
-  height: 24.6rem;
+  // width: 22.4rem;
+  // height: 24.6rem;
+  width: 22vh;
+  height: 24vh;
 
   top: 30%;
   left: 60%;
@@ -192,8 +206,10 @@
 }
 
 .mango-md {
-  width: 28rem;
-  height: 29.6rem;
+  // width: 28rem;
+  // height: 29.6rem;
+  width: 28vh;
+  height: 29vh;
 
   top: 29%;
   left: 8%;
@@ -203,8 +219,10 @@
 }
 
 .mango-big {
-  width: 42.9rem;
-  height: 53.3rem;
+  // width: 42.9rem;
+  // height: 53.3rem;
+  width: 42vh;
+  height: 53vh;
 
   top: 35%;
   left: 63%;
@@ -214,8 +232,10 @@
 }
 
 .drops {
-  width: 25.1rem;
-  height: 23.1rem;
+  width: 25vh;
+  height: 23vh;
+  // width: 25.1rem;
+  // height: 23.1rem;
 
   top: 58%;
   left: 10%;
@@ -226,37 +246,44 @@
 
 .chups-liquid {
   width: 92rem;
+  // width: 92vh;
   height: auto;
 
   position: absolute;
   left: 0;
   top: -10rem;
-  z-index: 1;
+  z-index: -1;
 }
 
 .smoke-big {
-  width: 108.4rem;
-  height: 92rem;
+  // width: 108.4rem;
+  // height: 92rem;
+  width: 108vh;
+  height: 92vh;
 
-  top: -27%;
-  left: -20%;
+  top: -20vh;
+  left: 0;
 
   background: url(../images/intro/cola/big-smoke.png) no-repeat;
   background-size: cover;
 }
 .smoke-sm {
-  width: 76.2rem;
-  height: 80rem;
+  // width: 76.2rem;
+  // height: 80rem;
+  width: 76vh;
+  height: 80vh;
 
-  top: 10%;
-  left: -10%;
+  top: 5vh;
+  left: -0;
 
   background: url(../images/intro/cola/sm-smoke.png) no-repeat;
   background-size: cover;
 }
 .ice-sm {
-  width: 15.4rem;
-  height: 22rem;
+  width: 15vh;
+  height: 22vh;
+  // width: 15.4rem;
+  // height: 22rem;
 
   top: 7%;
   left: 64%;
@@ -265,8 +292,10 @@
   background-size: cover;
 }
 .ice-md {
-  width: 31.9rem;
-  height: 67.2rem;
+  width: 32vh;
+  height: 68vh;
+  // width: 31.9rem;
+  // height: 67.2rem;
 
   top: 13%;
   left: -10%;
@@ -275,11 +304,13 @@
   background-size: cover;
 }
 .ice-big {
-  width: 13.1rem;
-  height: 37.2rem;
+  width: 13vh;
+  height: 37vh;
+  // width: 13.1rem;
+  // height: 37.2rem;
 
   top: 54%;
-  left: 87%;
+  left: 90%;
 
   background: url(../images/intro/cola/big-ice.png) no-repeat;
   background-size: cover;
@@ -306,7 +337,7 @@
 
 .intro-slider__navs {
   position: absolute;
-  top: 84%;
+  top: 82vh;
   left: 60%;
   z-index: 22;
 

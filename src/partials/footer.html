@@ -1,6 +1,67 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__inner">
+            <div class="footer-info">
+                <svg class="footer-info__logo">
+                    <use href="#logo"></use>
+                </svg>
+                <div class="footer-info__item">
+                    <p class="footer-info__item-name">Электронный адрес:</p>
+                    <a class="footer-info__item-link" href="mailto:123@m.m">office@importdrinks.ru</a>
+                </div>
+                <div class="footer-info__item">
+                    <p class="footer-info__item-name">Горячая линия:</p>
+                    <a class="footer-info__item-link" href="mailto:123123">8 (800) 101-23-03</a>
+                </div>
+                <div class="footer-info__item footer-info__item--address">
+                    <p class="footer-info__item-name">Адрес:</p>
+                    <p class="footer-info__item-link">50000 г. Краснодар, Московская, 59/1</p>
+                </div>
+                <div class="footer-info__soc">
+                    <a class="footer-info__soc-link soc-link--wsp" href="#">
+                        <svg>
+                            <use href="#whatsapp"></use>
+                        </svg>
+                    </a>
+                    <a class="footer-info__soc-link soc-link--tg" href="#">
+                        <svg>
+                            <use href="#tg"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <form class="footer-order">
+                <p class="footer-order__title">Обсудим детали <br> вашего заказа?</p>
+                <div class="order-item dark">
+                    <p class="order-item__name req">Введите ваше имя</p>
+                    <input class="order-item__input" type="text" placeholder="Иванов Иван" required>
+                </div>
+                <div class="order-item dark">
+                    <p class="order-item__name">Введите ваш E-mail</p>
+                    <input class="order-item__input" type="email" placeholder="example@mail.ru">
+                </div>
+                <div class="order-item dark">
+                    <p class="order-item__name req">Телефон</p>
+                    <input class="order-item__input" type="tel" placeholder="+7 (928) 123 45 67" required>
+                </div>
+                <div class="order-privacy">
+                    <input class="custom-checkbox" type="checkbox" id="footer-privacy" name="footer-privacy"
+                        value="red">
+                    <label for="footer-privacy">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
+                        персональных данных.</label>
+                </div>
+                <button class="order-submit filled-btn" type="submit">
+                    Отправить
+                    <svg>
+                        <use href="#arrow"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <div class="container">
+            <p>© import drinks 2022 Все права защищены</p>
         </div>
     </div>
 </footer>

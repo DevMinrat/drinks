@@ -1,2 +1,118 @@
 .footer {
+  padding-top: 9rem;
+
+  background-color: $primary;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 33.5rem 48rem;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-bottom: 7.6rem;
+}
+
+.footer-info__logo {
+  width: 22.7rem;
+  height: 9.2rem;
+
+  fill: white;
+
+  margin-bottom: 6.5rem;
+}
+
+.footer-info__item {
+  margin-bottom: 4.6rem;
+
+  &--address {
+    margin-top: 5.4rem;
+
+    .footer-info__item-link {
+      font-weight: 400;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+.footer-info__item-name {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.38;
+  color: #615991;
+}
+.footer-info__item-link {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1.23;
+
+  color: #ffffff;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.footer-info__soc {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  .footer-info__soc-link {
+    width: 4rem;
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  .soc-link--wsp {
+    background: #29a71a;
+
+    svg {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+  .soc-link--tg {
+    background: #1c8adb;
+
+    svg {
+      width: 2.6rem;
+      height: 2rem;
+    }
+  }
+}
+
+.footer-order__title {
+  font-family: "Pribambas";
+  font-size: 4.8rem;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+
+  margin-bottom: 3rem;
+}
+
+.footer-copy {
+  padding: 1.7rem 0;
+
+  background: #232037;
+
+  p {
+    font-size: 1.6rem;
+    color: #9c97ba;
+  }
 }

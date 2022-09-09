@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   //= ../../../node_modules/@splidejs/splide/dist/js/splide.js
   //= ../../../node_modules/parallax-js/dist/parallax.js
   //= components/
@@ -149,9 +151,70 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // popular parallax bg
+
+  let startPosPopBg = -300;
+
+  ScrollTrigger.create({
+    trigger: ".popular",
+    start: "top bottom",
+    endTrigger: ".weworks",
+    end: "top center",
+    onUpdate: (self) => {
+      let factor = 300;
+      console.log(factor * self.progress.toFixed(2));
+      self.trigger.style.backgroundPosition = `right top ${
+        startPosPopBg + factor * self.progress.toFixed(2)
+      }px`;
+    },
+  });
+
   // parallax benefits
 
   const benefitsContent = document.querySelector(".benefits-content");
 
   const benefitsParallax = new Parallax(benefitsContent);
+
+  // clients animation
+
+  const clientsTopFT = gsap.fromTo(
+    ".clients-top",
+    {
+      x: -1340,
+    },
+    {
+      x: 0,
+      ease: "none",
+    }
+  );
+  const clientsBottomFT = gsap.fromTo(
+    ".clients-bottom",
+    {
+      x: 0,
+    },
+    {
+      x: -1340,
+      ease: "none",
+    }
+  );
+  let clientsTopST = ScrollTrigger.create({
+    trigger: ".clients",
+    start: "200 bottom",
+    end: "bottom top",
+    scrub: 1.5,
+    animation: clientsTopFT,
+  });
+  let clientsBottomST2 = ScrollTrigger.create({
+    trigger: ".clients",
+    start: "200 bottom",
+    end: "bottom top",
+    scrub: 1.5,
+    animation: clientsBottomFT,
+  });
+
+  // animate fruits and berries
+
+  const animFruits = document.querySelectorAll(".anim-fruit");
+
+  
 });

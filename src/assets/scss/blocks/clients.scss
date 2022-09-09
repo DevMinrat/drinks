@@ -6,4 +6,26 @@
   padding: 14rem 0 13rem;
 
   background: #fff4e7;
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.clients-top,
+.clients-bottom {
+  display: flex;
+  align-items: center;
+  column-gap: 3.2rem;
+
+  will-change: transform;
+
+  img {
+    width: 100%;
+    max-width: 27.4rem;
+  }
+}
+
+.clients-top {
+  margin-bottom: 1.6rem;
 }
