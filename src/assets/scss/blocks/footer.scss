@@ -1,7 +1,14 @@
 .footer {
+  position: relative;
+
   padding-top: 9rem;
 
   background-color: $primary;
+
+  .wave-wrapper {
+    top: -5rem;
+    bottom: unset;
+  }
 }
 
 .footer__inner {

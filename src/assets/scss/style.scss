@@ -43,6 +43,10 @@ body {
 
 main {
   // padding-top: 9.6rem;
+
+  &.padding {
+    padding-top: 12rem;
+  }
 }
 
 img {
@@ -73,6 +77,7 @@ svg {
 @import "blocks/page";
 @import "blocks/waves.scss";
 @import "blocks/section.scss";
+@import "blocks/breadcrumbs.scss";
 @import "blocks/animate-berries.scss";
 @import "blocks/container";
 @import "blocks/header";
@@ -86,6 +91,10 @@ svg {
 @import "blocks/marketplaces.scss";
 @import "blocks/benefits.scss";
 @import "blocks/clients.scss";
+
+@import "blocks/catalog-main.scss";
+@import "blocks/catalog-page.scss";
+@import "blocks/product.scss";
 
 @import "blocks/footer";
 

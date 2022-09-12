@@ -1,3 +1,16 @@
 .page {
   overflow: hidden;
 }
+
+.page-title {
+  font-family: "Pribambas";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6.2rem;
+  line-height: 1.23;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $primary;
+
+  margin-bottom: 10rem;
+}

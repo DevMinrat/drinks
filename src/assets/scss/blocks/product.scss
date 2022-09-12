@@ -1,0 +1,41 @@
+.product__inner {
+  display: grid;
+  grid-template-areas:
+    "pg ph"
+    "pg pd"
+    "pg p";
+}
+
+.product-gallery {
+  grid-area: pg;
+}
+
+.product-producer {
+  margin-bottom: 6rem;
+}
+
+.product-header {
+  grid-area: ph;
+
+  margin-bottom: 3.2rem;
+}
+
+.product-header__title {
+  font-family: "Pribambas";
+  font-weight: 400;
+  font-size: 6.2rem;
+  line-height: 1.23;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $primary;
+
+  margin-bottom: 1rem;
+}
+
+.product-header__descr {
+  color: $primary;
+}
+
+.product-data {
+  grid-area: pd;
+}

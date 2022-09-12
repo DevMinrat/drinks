@@ -26,9 +26,11 @@
   }
 
   &:hover {
+    color: $accent;
     background-color: transparent;
 
     svg {
+      fill: $accent;
       margin-left: 2rem;
     }
   }
