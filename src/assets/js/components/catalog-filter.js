@@ -42,6 +42,7 @@ if (cpFilterTriggers.length > 0) {
       if (target.classList.contains("filter-list__item-close")) {
         filterItem.remove();
         document.querySelector(`#${name}`).checked = false;
+        showFilterReset();
       }
     });
 
@@ -69,5 +70,6 @@ if (cpFilterTriggers.length > 0) {
 
   filterReset.addEventListener("click", () => {
     filterList.innerHTML = "";
+    showFilterReset();
   });
 }

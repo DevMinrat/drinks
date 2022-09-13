@@ -71,6 +71,7 @@ svg {
 /* Vendors */
 
 @import "vendor/splide.scss";
+@import "vendor/lightgallery.scss";
 
 /* Blocks */
 
@@ -79,6 +80,7 @@ svg {
 @import "blocks/section.scss";
 @import "blocks/breadcrumbs.scss";
 @import "blocks/animate-berries.scss";
+@import "blocks/tabs.scss";
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/hollow-btn.scss";

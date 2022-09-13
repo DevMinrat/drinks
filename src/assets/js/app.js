@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //= ../../../node_modules/@splidejs/splide/dist/js/splide.js
   //= ../../../node_modules/parallax-js/dist/parallax.js
+  //= components/lightgallery.js
 
   const header = document.querySelector(".header");
   let scrollPrev = 0;
@@ -227,4 +228,67 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //= components/catalog-filter.js
+
+  // tabs
+
+  class ItcTabs {
+    constructor(target, config) {
+      const defaultConfig = {};
+      this._config = Object.assign(defaultConfig, config);
+      this._elTabs =
+        typeof target === "string" ? document.querySelector(target) : target;
+      this._elButtons = this._elTabs.querySelectorAll(".tabs-btn");
+      this._elPanes = this._elTabs.querySelectorAll(".tabs-pane");
+      this._eventShow = new Event("tab.itc.change");
+      this._init();
+      this._events();
+    }
+    _init() {
+      this._elTabs.setAttribute("role", "tablist");
+      this._elButtons.forEach((el, index) => {
+        el.dataset.index = index;
+        el.setAttribute("role", "tab");
+        this._elPanes[index].setAttribute("role", "tabpanel");
+      });
+    }
+    show(elLinkTarget) {
+      const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+      const elLinkActive = this._elTabs.querySelector(".tabs-btn_active");
+      const elPaneShow = this._elTabs.querySelector(".tabs-pane_show");
+      if (elLinkTarget === elLinkActive) {
+        return;
+      }
+      elLinkActive ? elLinkActive.classList.remove("tabs-btn_active") : null;
+      elPaneShow ? elPaneShow.classList.remove("tabs-pane_show") : null;
+      elLinkTarget.classList.add("tabs-btn_active");
+      elPaneTarget.classList.add("tabs-pane_show");
+      this._elTabs.dispatchEvent(this._eventShow);
+      elLinkTarget.focus();
+    }
+    showByIndex(index) {
+      const elLinkTarget = this._elButtons[index];
+      elLinkTarget ? this.show(elLinkTarget) : null;
+    }
+    _events() {
+      this._elTabs.addEventListener("click", (e) => {
+        const target = e.target.closest(".tabs-btn");
+        if (target) {
+          e.preventDefault();
+          this.show(target);
+        }
+      });
+    }
+  }
+
+  if (document.querySelector(".product-info")) {
+    new ItcTabs(".product-info");
+  }
+
+  const certificatesWrapper = document.querySelector(".certificates-wrapper");
+
+  if (certificatesWrapper) {
+    lightGallery(certificatesWrapper, {
+      loop: false,
+    });
+  }
 });
