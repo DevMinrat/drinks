@@ -1,4 +1,17 @@
 .anim-fruit {
   z-index: 5;
-}
 
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(30rem);
+  transition: all 1s ease;
+
+  &.from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &.from-top {
+    opacity: 1;
+    transform: translateY(-30rem);
+  }
+}

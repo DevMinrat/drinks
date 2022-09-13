@@ -225,6 +225,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const animFruits = document.querySelectorAll(".anim-fruit");
 
   if (animFruits.length > 0) {
+    function animateFrom(elem, direction) {
+      direction = direction || 1;
+
+      switch (direction) {
+        case -1:
+          elem.classList.add("from-bottom");
+          elem.classList.remove("from-top");
+          break;
+        case 1:
+          elem.classList.add("from-bottom");
+          elem.classList.remove("from-top");
+          break;
+        case 2:
+          elem.classList.remove("from-bottom");
+          elem.classList.add("from-top");
+          break;
+        case 3:
+          elem.classList.remove("from-bottom");
+          elem.classList.remove("from-top");
+          break;
+
+        default:
+          break;
+      }
+    }
+
+    animFruits.forEach((elem) => {
+      ScrollTrigger.create({
+        trigger: elem,
+        end: "top-=300 top",
+        onEnter: function () {
+          animateFrom(elem);
+          console.log(1);
+        },
+        onEnterBack: function () {
+          animateFrom(elem, -1);
+          console.log(2);
+        },
+        onLeave: function () {
+          animateFrom(elem, 2);
+          console.log(3);
+        },
+        onLeaveBack: () => {
+          animateFrom(elem, 3);
+        },
+      });
+    });
   }
 
   //= components/catalog-filter.js
