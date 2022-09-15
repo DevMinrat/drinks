@@ -5,6 +5,10 @@
 
   background-color: $primary;
 
+  @include breakpoint($sm-bp) {
+    padding-top: 4rem;
+  }
+
   .wave-wrapper {
     top: -5rem;
     bottom: unset;
@@ -14,11 +18,26 @@
 .footer__inner {
   display: grid;
   grid-template-columns: 33.5rem 48rem;
-  gap: 4rem;
+  gap: 5rem 4rem;
   justify-content: space-between;
   align-items: flex-start;
 
   padding-bottom: 7.6rem;
+
+  @include breakpoint($xl-bp) {
+    justify-content: space-evenly;
+  }
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem 2rem;
+
+    justify-content: space-between;
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+
+    padding-bottom: 3.5rem;
+  }
 }
 
 .footer-info__logo {
@@ -28,20 +47,45 @@
   fill: white;
 
   margin-bottom: 6.5rem;
+
+  @include breakpoint($sm-bp) {
+    width: 13.8rem;
+    height: 5.6rem;
+
+    margin-bottom: 4rem;
+  }
 }
 
 .footer-info__item {
   margin-bottom: 4.6rem;
 
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2rem;
+  }
+
   &--address {
     margin-top: 5.4rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 0.3rem;
+    }
 
     .footer-info__item-link {
       font-weight: 400;
       font-size: 1.6rem;
 
+      @include breakpoint($sm-bp) {
+        font-family: "Inter";
+      }
+
       &:hover {
         color: white;
+      }
+    }
+
+    .order-item__name {
+      @include breakpoint($sm-bp) {
+        font-size: max(12px, 1.2rem);
       }
     }
   }
@@ -51,6 +95,13 @@
   font-size: 1.6rem;
   line-height: 1.38;
   color: #615991;
+
+  @include breakpoint($sm-bp) {
+    color: #9c97ba;
+    font-size: max(12px, 1.4rem);
+
+    margin-bottom: 1rem;
+  }
 }
 .footer-info__item-link {
   font-weight: 700;
@@ -58,6 +109,13 @@
   line-height: 1.23;
 
   color: #ffffff;
+
+  @include breakpoint($sm-bp) {
+    font-family: "Pribambas";
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 3.2rem;
+  }
 
   &:hover {
     color: $accent;
@@ -111,6 +169,25 @@
   color: #ffffff;
 
   margin-bottom: 3rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.8rem;
+
+    margin-bottom: 2.4rem;
+  }
+}
+
+.footer-order__btn {
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+    justify-content: center;
+
+    box-shadow: 0px 10px 24px rgba(255, 104, 0, 0.22);
+
+    svg {
+      display: none;
+    }
+  }
 }
 
 .footer-copy {
@@ -118,8 +195,17 @@
 
   background: #232037;
 
+  @include breakpoint($sm-bp) {
+    padding: 1.3rem 0;
+  }
+
   p {
     font-size: 1.6rem;
     color: #9c97ba;
+
+    @include breakpoint($sm-bp) {
+      text-align: center;
+      font-size: max(12px, 1.2rem);
+    }
   }
 }

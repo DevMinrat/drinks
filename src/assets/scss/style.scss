@@ -11,7 +11,7 @@ html {
   //   font-size: calc(100vw / 1600 * 10);
   // }
   @include breakpoint($xl-bp) {
-    font-size: calc(100vw / 1385 * 10);
+    font-size: calc(100vw / 1200 * 10);
   }
   @include breakpoint($lg-bp) {
     font-size: calc(100vw / 830 * 10);
@@ -82,9 +82,9 @@ svg {
 @import "blocks/animate-berries.scss";
 @import "blocks/tabs.scss";
 @import "blocks/container";
-@import "blocks/header";
 @import "blocks/hollow-btn.scss";
 @import "blocks/filled-btn.scss";
+@import "blocks/header";
 @import "blocks/order.scss";
 
 @import "blocks/intro.scss";

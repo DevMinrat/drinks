@@ -14,4 +14,8 @@
     opacity: 1;
     transform: translateY(-30rem);
   }
+
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }

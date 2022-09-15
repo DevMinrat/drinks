@@ -7,4 +7,8 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $primary;
+
+  @include breakpoint($sm-bp) {
+    font-size: 4rem;
+  }
 }

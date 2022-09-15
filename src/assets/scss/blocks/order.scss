@@ -23,6 +23,11 @@
         color: #f04c4c;
         margin-left: 0.1rem;
       }
+
+      @include breakpoint($sm-bp) {
+        color: #615991;
+        font-size: max(12px, 1.2rem);
+      }
     }
     .order-item__input {
       width: 100%;
@@ -37,11 +42,22 @@
       background-color: transparent;
       border-bottom: 1px solid #9c97ba;
 
+      @include breakpoint($sm-bp) {
+        font-size: 1.6rem;
+
+        border-bottom-color: #fff;
+      }
+
       &::placeholder {
         font-weight: 400;
         font-size: 2rem;
         line-height: 130%;
         color: #615991;
+
+        @include breakpoint($sm-bp) {
+          font-size: 1.6rem;
+          color: #9c97ba;
+        }
       }
     }
   }
@@ -50,6 +66,20 @@
 .order-privacy,
 .order-submit {
   margin-top: 3.5rem;
+
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+  }
+}
+
+.order-privacy {
+  .custom-checkbox + label {
+    align-items: flex-start;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.4rem);
+    }
+  }
 }
 
 .custom-checkbox {
@@ -79,6 +109,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 85%;
+
+  @include breakpoint($sm-bp) {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {

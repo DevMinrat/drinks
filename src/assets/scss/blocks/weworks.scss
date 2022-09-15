@@ -3,8 +3,20 @@
 
   padding: 15rem 0 20rem;
 
+  @include breakpoint($lg-bp) {
+    padding: 15rem 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 3rem 0;
+  }
+
   .section-title {
     margin-bottom: 3.6rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 2.8rem;
+    }
   }
 
   .raspberry {
@@ -25,14 +37,26 @@
     width: 100%;
     max-width: 19.6rem;
   }
+
+  .wave-wrapper {
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
+  }
 }
 
 .weworks__inner {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
 
   gap: 0.6rem 4rem;
   justify-content: center;
+
+  @include breakpoint($lg-bp) {
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: unset;
+  }
 }
 
 .weworks-item {
@@ -51,8 +75,25 @@
 
   transition: all 0.2s ease;
 
+  @include breakpoint($lg-bp) {
+    height: auto;
+
+    padding: 3rem 0;
+
+    border-color: $primary;
+    border-radius: 2.8rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding-top: 1.6rem 0;
+  }
+
   &:last-child {
     margin-left: 10rem;
+
+    @include breakpoint($lg-bp) {
+      margin-left: 0;
+    }
   }
 
   &:hover {
@@ -64,6 +105,10 @@
     .weworks-item__descr {
       font-weight: 700;
       color: white;
+
+      @include breakpoint($sm-bp) {
+        font-weight: 500;
+      }
     }
   }
 }
@@ -75,6 +120,10 @@
   fill: #aaa6c2;
 
   margin-bottom: 1.6rem;
+
+  @include breakpoint($lg-bp) {
+    fill: $primary;
+  }
 }
 
 .weworks-item__descr {
@@ -82,4 +131,9 @@
   color: $primary;
 
   transition: inherit;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
 }

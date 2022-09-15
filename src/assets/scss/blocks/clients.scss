@@ -7,8 +7,24 @@
 
   background: #fff4e7;
 
+  @include breakpoint($sm-bp) {
+    height: unset;
+
+    padding: 3rem 0;
+
+    background: #fff;
+  }
+
   .section-title {
     margin-bottom: 1rem;
+  }
+
+  .wave-wrapper {
+    display: none;
+
+    @include breakpoint($sm-bp) {
+      display: block;
+    }
   }
 }
 

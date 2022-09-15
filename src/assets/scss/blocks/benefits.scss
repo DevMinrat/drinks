@@ -2,6 +2,14 @@
   position: relative;
 
   padding-top: 3.5rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 3rem 0;
+
+    .wave-wrapper {
+      display: none;
+    }
+  }
 }
 
 .benefits-header {
@@ -20,11 +28,21 @@
   color: $primary;
 
   margin-bottom: 3.2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+
+    margin-bottom: 1.6rem;
+  }
 }
 
 .benefits__descr {
   width: 100%;
   max-width: 56.4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.4rem);
+  }
 }
 
 .benefits__link {
@@ -42,7 +60,38 @@
   background: url(../images/icons/star.svg) no-repeat;
   background-size: cover;
 
+  @include breakpoint($sm-bp) {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 32.8rem;
+    height: 4.4rem;
+
+    color: white;
+
+    background: #392f76;
+    border: 0.1rem solid transparent;
+    box-shadow: 0px 1rem 2.4rem rgba(57, 47, 118, 0.18);
+    border-radius: 100rem;
+
+    &.star-link p {
+      transform: none;
+      max-width: unset;
+
+      font-weight: 400;
+      font-size: max(12px, 1.4rem);
+    }
+  }
+
   &:hover {
+    @include breakpoint($sm-bp) {
+      background: transparent;
+      border-color: $primary;
+    }
     .benefits-link__star {
       stroke: $primary;
     }
@@ -57,6 +106,10 @@
     height: 100%;
 
     stroke: rgba(57, 47, 118, 0.12);
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   .benefits-link__star {
@@ -68,6 +121,10 @@
     transform: translate(-50%, -50%);
 
     fill: $primary;
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 }
 
@@ -80,6 +137,16 @@
   height: 46.3rem;
 
   margin-left: auto;
+
+  @include breakpoint($lg-bp) {
+    top: 2.2rem;
+
+    height: 52rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    height: 38rem;
+  }
 }
 
 .benefits-layer {
@@ -102,12 +169,25 @@
   border-radius: 50%;
   border: 0.8rem solid #ffffff;
 
+  @include breakpoint($sm-bp) {
+    border-width: 0.3rem;
+  }
+
   .benefits-item__count {
     font-size: 3.6rem;
     line-height: 1.1;
+
+    @include breakpoint($sm-bp) {
+      font-weight: 700;
+      font-size: max(12px, 1.4rem);
+    }
   }
   .benefits-item__descr {
     text-align: center;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+    }
   }
 }
 
@@ -120,8 +200,20 @@
 
   background: #ffb0b5;
 
+  @include breakpoint($sm-bp) {
+    left: 3rem;
+    top: 9.5rem;
+
+    max-width: 15.1rem;
+    height: 15.1rem;
+  }
+
   .benefits-item__count span {
     font-size: 6.4rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: 3.2rem;
+    }
   }
 }
 .bi-md {
@@ -135,6 +227,16 @@
 
   background: #abffa9;
 
+  @include breakpoint($sm-bp) {
+    right: -1rem;
+    top: 13rem;
+
+    max-width: 15.1rem;
+    height: 15.1rem;
+
+    background: #fffaf3;
+  }
+
   .benefits-item__count {
     display: flex;
     align-items: center;
@@ -142,8 +244,16 @@
 
     line-height: 1;
 
+    @include breakpoint($sm-bp) {
+      margin-bottom: 0.8rem;
+    }
+
     span {
       font-size: 6.4rem;
+
+      @include breakpoint($sm-bp) {
+        font-size: 2.7rem;
+      }
     }
   }
 }
@@ -156,8 +266,25 @@
 
   background: #feb25c;
 
+  @include breakpoint($sm-bp) {
+    left: 13rem;
+
+    max-width: 18.7rem;
+    height: 18.7rem;
+  }
+
   .benefits-item__count span {
     font-size: 12rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: 5.9rem;
+    }
+  }
+
+  .benefits-item__descr {
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.4rem);
+    }
   }
 }
 

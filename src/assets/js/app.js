@@ -1,9 +1,13 @@
+//= ../../../node_modules/@splidejs/splide/dist/js/splide.js
+//= ../../../node_modules/parallax-js/dist/parallax.js
+//= components/lightgallery.js
+//= components/scroll-lock.js
+
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
+  const gsapMM = gsap.matchMedia();
 
-  //= ../../../node_modules/@splidejs/splide/dist/js/splide.js
-  //= ../../../node_modules/parallax-js/dist/parallax.js
-  //= components/lightgallery.js
+  //= components/sliders.js
 
   const header = document.querySelector(".header");
   let scrollPrev = 0;
@@ -30,6 +34,58 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.add("top");
   }
 
+  const burger = document.querySelector(".burger-menu");
+  const menu = document.querySelector(".menu");
+  const dropLinks = document.querySelectorAll(".nav-list__item-link--droplink");
+  const dropList = document.querySelectorAll(".nav-list__droplink-list");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("menu-on");
+    menu.classList.toggle("active");
+
+    if (burger.classList.contains("menu-on")) {
+      scrollLock.disablePageScroll();
+    } else {
+      scrollLock.enablePageScroll();
+    }
+  });
+
+  if (window.innerWidth <= 991) {
+    for (let i = 0; i < dropLinks.length; i++) {
+      dropLinks[i].addEventListener("click", function (e) {
+        toggleDroplinksStyle(i);
+        showDroplistContent(e, i);
+      });
+    }
+  }
+
+  function toggleDroplinksStyle(i) {
+    dropLinks.forEach((el, inx, arr) => {
+      if (el === arr[i]) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  }
+
+  function hideAllDropList() {
+    dropList.forEach((item) => {
+      item.style.maxHeight = null;
+    });
+  }
+
+  function showDroplistContent(event, i) {
+    if (!dropList[i].style.maxHeight) {
+      event.preventDefault();
+      hideAllDropList();
+      dropList[i].style.maxHeight = dropList[i].scrollHeight + "px";
+    } else {
+      event.stopPropagation();
+      hideAllDropList();
+    }
+  }
+
   // intro slider
 
   const introSliderEl = document.querySelector(".intro-slider");
@@ -38,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // parallax intro
 
   if (introSliderEl) {
-    const introSlider = new Splide(".splide", {
+    const introSlider = new Splide(".intro-slider", {
       type: "fade",
       rewind: true,
       autoplay: true,
@@ -147,9 +203,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    popularItems.forEach((el) => {
-      el.addEventListener("mouseenter", (e) => {
-        animatePopBubbleSvg();
+    gsapMM.add("(min-width: 501px)", () => {
+      popularItems.forEach((el) => {
+        el.addEventListener("mouseenter", (e) => {
+          animatePopBubbleSvg();
+        });
       });
     });
   }
@@ -161,29 +219,34 @@ document.addEventListener("DOMContentLoaded", () => {
   if (popularMain) {
     let startPosPopBg = -300;
 
-    ScrollTrigger.create({
-      trigger: ".popular",
-      start: "top bottom",
-      endTrigger: ".weworks",
-      end: "top center",
-      onUpdate: (self) => {
-        let factor = 300;
-        self.trigger.style.backgroundPosition = `right top ${
-          startPosPopBg + factor * self.progress.toFixed(2)
-        }px`;
-      },
+    gsapMM.add("(min-width: 921px)", () => {
+      ScrollTrigger.create({
+        trigger: ".popular",
+        start: "top bottom",
+        endTrigger: ".weworks",
+        end: "top center",
+        onUpdate: (self) => {
+          let factor = 300;
+          self.trigger.style.backgroundPosition = `right top ${
+            startPosPopBg + factor * self.progress.toFixed(2)
+          }px`;
+        },
+      });
     });
   }
 
   // parallax benefits
 
   const benefitsContent = document.querySelector(".benefits-content");
+  const clients = document.querySelector(".clients");
 
   // clients animation
 
   if (benefitsContent) {
     const benefitsParallax = new Parallax(benefitsContent);
+  }
 
+  if (clients) {
     const clientsTopFT = gsap.fromTo(
       ".clients-top",
       {
@@ -206,14 +269,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     let clientsTopST = ScrollTrigger.create({
       trigger: ".clients",
-      start: "200 bottom",
+      start: "100 bottom",
       end: "bottom top",
       scrub: 1.5,
       animation: clientsTopFT,
     });
     let clientsBottomST2 = ScrollTrigger.create({
       trigger: ".clients",
-      start: "200 bottom",
+      start: "100 bottom",
       end: "bottom top",
       scrub: 1.5,
       animation: clientsBottomFT,
@@ -251,25 +314,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    animFruits.forEach((elem) => {
-      ScrollTrigger.create({
-        trigger: elem,
-        end: "top-=300 top",
-        onEnter: function () {
-          animateFrom(elem);
-          console.log(1);
-        },
-        onEnterBack: function () {
-          animateFrom(elem, -1);
-          console.log(2);
-        },
-        onLeave: function () {
-          animateFrom(elem, 2);
-          console.log(3);
-        },
-        onLeaveBack: () => {
-          animateFrom(elem, 3);
-        },
+    gsapMM.add("(min-width: 921px)", () => {
+      animFruits.forEach((elem) => {
+        ScrollTrigger.create({
+          trigger: elem,
+          end: "top-=300 top",
+          onEnter: function () {
+            animateFrom(elem);
+          },
+          onEnterBack: function () {
+            animateFrom(elem, -1);
+          },
+          onLeave: function () {
+            animateFrom(elem, 2);
+          },
+          onLeaveBack: () => {
+            animateFrom(elem, 3);
+          },
+        });
       });
     });
   }

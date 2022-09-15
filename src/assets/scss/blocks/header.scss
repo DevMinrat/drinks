@@ -16,11 +16,21 @@
   background-color: white;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 
-  a {
+  .nav-list__item-link {
     color: $primary;
 
     &:hover {
       color: $accent;
+    }
+
+    @include breakpoint($lg-bp) {
+      font-weight: 700;
+      font-size: 2rem;
+      color: white;
+
+      &:hover {
+        color: $accent;
+      }
     }
   }
 
@@ -41,12 +51,38 @@
         --accent-color: #ff6800;
       }
 
-      a {
+      .nav-list__item-link {
         color: $primary;
+
+        @include breakpoint($lg-bp) {
+          color: white;
+        }
 
         &:hover {
           color: $secondary;
         }
+      }
+
+      .header-links__lang,
+      .header-links__tel {
+        color: $primary;
+
+        @include breakpoint($lg-bp) {
+          color: white;
+        }
+
+        &:hover {
+          color: $accent;
+        }
+      }
+
+      .burger,
+      .burger::before,
+      .burger::after {
+        background-color: $primary;
+      }
+      .burger-menu.menu-on .burger {
+        background: rgba(#595187, 0);
       }
     }
 
@@ -79,16 +115,50 @@
     --accent-color: white;
   }
 
-  a {
+  .nav-list__item-link {
     color: white;
 
     &:hover {
       color: $primary;
+
+      @include breakpoint($lg-bp) {
+        color: $accent;
+      }
+    }
+  }
+
+  .nav-list__item-arrow {
+    fill: #fff;
+  }
+  & .nav-list__item-link--droplink:hover + svg {
+    fill: $primary;
+
+    @include breakpoint($lg-bp) {
+      fill: $accent;
+    }
+  }
+
+  .header-links__lang,
+  .header-links__tel {
+    color: white;
+
+    &:hover {
+      color: $primary;
+
+      @include breakpoint($lg-bp) {
+        color: $accent;
+      }
     }
   }
 
   @include breakpoint($lg-bp) {
     padding: 2rem 0;
+
+    .burger,
+    .burger::before,
+    .burger::after {
+      background-color: #fff;
+    }
   }
 }
 
@@ -100,12 +170,24 @@
 .header__logo {
   margin-right: 6.5rem;
 
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    max-width: 11.7rem;
+
+    margin-right: 0;
+  }
+
   svg {
     width: 100%;
     max-width: 15.6rem;
     height: 5.6rem;
 
     fill: $primary;
+
+    @include breakpoint($sm-bp) {
+      max-width: 11.7rem;
+      height: 4.2rem;
+    }
   }
 
   .logo-use {
@@ -123,25 +205,316 @@
   width: 100%;
 
   margin-top: 0.8rem;
+
+  @include breakpoint($lg-bp) {
+    position: fixed;
+    top: -1rem;
+    left: 0;
+    overflow-y: auto;
+
+    flex-direction: column;
+
+    height: 100%;
+    min-height: calc(100vh + 1rem);
+
+    padding: 13.3rem 1.6rem 3.2rem;
+
+    background: $primary;
+
+    will-change: transform;
+
+    transform: translateX(100%);
+    transition: all 0.2s ease;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
 }
 
 .menu__nav-list {
+  position: relative;
+
   display: flex;
   align-items: center;
   gap: 3.2rem;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+  }
 }
 
 .header-links {
   display: flex;
   align-items: center;
   gap: 3.6rem;
+
+  @include breakpoint($lg-bp) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.nav-list__item--dropdown {
+  @include breakpoint($lg-bp) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  &:hover {
+    @media (min-width: 921px) {
+      .nav-list__item-arrow {
+        transform-origin: center;
+        transform: rotate(180deg) translateY(-0.2rem);
+      }
+
+      .nav-list__droplink-list {
+        display: flex;
+      }
+    }
+  }
+}
+
+.nav-list__item-link--droplink {
+  padding-bottom: 1.5rem;
+
+  &:hover {
+    & + svg {
+      fill: $accent;
+    }
+  }
+
+  @include breakpoint($lg-bp) {
+    padding-bottom: 0;
+
+    &.active + svg {
+      transform: rotate(0);
+    }
+  }
+}
+
+.nav-list__droplink-list {
+  position: absolute;
+  top: 3rem;
+  z-index: 22;
+
+  display: none;
+  flex-direction: column;
+
+  width: max-content;
+  min-width: 20rem;
+
+  padding: 1.6rem;
+
+  background: white;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.6rem;
+
+  transition: all 0.2s linear;
+
+  @include breakpoint($lg-bp) {
+    position: relative;
+    display: flex;
+
+    top: 1rem;
+
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0;
+
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+
+.droplink-list__item-link {
+  width: 100%;
+  height: 3.6rem;
+
+  line-height: 3.6rem;
+  color: $primary;
+
+  @include breakpoint($lg-bp) {
+    color: white;
+
+    padding-left: 2rem;
+
+    &:last-child {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.nav-list__item-arrow {
+  width: 1.6rem;
+  height: 1.6rem;
+
+  fill: $primary;
+
+  @include breakpoint($lg-bp) {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    fill: white;
+
+    transform: rotate(-90deg);
+  }
 }
 
 .header-links__lang {
   font-weight: 700;
+  color: $primary;
+
+  &:hover {
+    color: $accent;
+  }
+
+  @include breakpoint($lg-bp) {
+    position: absolute;
+    left: 1.6rem;
+    top: 3rem;
+  }
 }
 
 .header-links__tel {
+  color: $primary;
   font-weight: 700;
   font-size: 2rem;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.header-links__lang,
+.header-links__tel {
+  color: $primary;
+
+  @include breakpoint($lg-bp) {
+    color: white;
+  }
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// burger
+
+.burger-menu {
+  display: none;
+
+  position: absolute;
+  right: 1.8rem;
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+
+  @include breakpoint($lg-bp) {
+    display: block;
+  }
+}
+
+.burger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger::before {
+  content: "";
+  top: 6px;
+}
+
+.burger::after {
+  content: "";
+  bottom: 6px;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+
+  display: block;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: $primary;
+  border-radius: 3rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-menu.menu-on {
+  background: #ffffff;
+  box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.19);
+}
+
+.burger-menu.menu-on .burger::after {
+  transform: translateX(-50%) rotate(-45deg);
+  bottom: 0;
+
+  width: 10px;
+  height: 2px;
+
+  background: #595187;
+}
+.burger-menu.menu-on .burger::before {
+  transform: translateX(-50%) rotate(45deg);
+  top: 0;
+
+  width: 10px;
+  height: 2px;
+
+  background: #595187;
+}
+.burger-menu.menu-on .burger {
+  background: rgba(#595187, 0);
+  width: 10px;
+}
+
+.header-links__soc-mob {
+  display: none;
+
+  @include breakpoint($lg-bp) {
+    display: flex;
+  }
+}
+
+.header-links__cons-btn {
+  display: none;
+
+  width: 100%;
+  max-width: 32.8rem;
+
+  @include breakpoint($lg-bp) {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+  }
 }

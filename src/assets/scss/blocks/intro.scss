@@ -2,6 +2,10 @@
   position: relative;
 
   height: 100vh;
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 5.6rem;
+  }
 }
 
 .intro-bg {
@@ -15,6 +19,10 @@
 
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    background-size: 100% 100%;
+  }
 
   &.ibg-chups {
     background-image: url(../images/intro/chupa-chups/chupa-chups-bg.jpg);
@@ -37,14 +45,28 @@
   height: 100%;
 
   margin-left: 20rem;
+
+  @include breakpoint($xl-bp) {
+    margin-left: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column-reverse;
+
+    margin-left: 0;
+    padding: 10rem 1.6rem 0;
+  }
 }
 
 .intro-content {
   width: 100%;
   max-width: 57.2rem;
 
-  // margin-top: 19rem;
   margin-top: 20vh;
+
+  @include breakpoint($xl-bp) {
+    margin-top: 0;
+  }
 }
 
 .intro__title {
@@ -55,6 +77,16 @@
   color: white;
 
   margin-bottom: 4.5rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 6.4rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 4rem;
+    text-align: center;
+
+    margin-bottom: 1.4rem;
+  }
 }
 
 .intro__subtitle {
@@ -63,6 +95,13 @@
   color: white;
 
   margin-bottom: 5.3rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    text-align: center;
+
+    margin-bottom: 4.3rem;
+  }
 }
 
 .intro-slider {
@@ -82,6 +121,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include breakpoint($sm-bp) {
+    height: auto;
+  }
 }
 
 .intro-item__bottle {
@@ -93,6 +136,10 @@
 
   transform: rotate(12deg);
   animation: animateBottle 6s ease infinite alternate;
+
+  @include breakpoint($sm-bp) {
+    max-width: 20rem;
+  }
 }
 
 @keyframes animateBottle {
@@ -155,6 +202,27 @@
       fill: white;
     }
   }
+
+  @include breakpoint($sm-bp) {
+    max-width: 32.8rem;
+    height: 4.8rem;
+
+    background: $accent;
+    box-shadow: 0px 1rem 1.8rem rgba(255, 104, 0, 0.4);
+    border-radius: 6rem;
+
+    p {
+      transform: none;
+      font-size: 1.6rem;
+      color: white;
+      font-weight: 500;
+      max-width: unset;
+    }
+
+    svg {
+      display: none;
+    }
+  }
 }
 
 // parallax
@@ -207,6 +275,14 @@
 
   background: url(../images/intro/chupa-chups/mango-sm.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 6.4rem;
+    height: 8.4rem;
+
+    top: 45%;
+    left: 62%;
+  }
 }
 
 .mango-md {
@@ -220,6 +296,18 @@
 
   background: url(../images/intro/chupa-chups/mango-md.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    top: 40%;
+    left: 0;
+  }
+  @include breakpoint($sm-bp) {
+    width: 12.2rem;
+    height: 13rem;
+
+    top: 35%;
+    left: 15%;
+  }
 }
 
 .mango-big {
@@ -233,6 +321,15 @@
 
   background: url(../images/intro/chupa-chups/mango-big.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 10.3rem;
+    height: 14rem;
+
+    top: 65%;
+
+    filter: blur(2.39951px);
+  }
 }
 
 .drops {
@@ -246,6 +343,11 @@
 
   background: url(../images/intro/chupa-chups/drops.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 12rem;
+    height: 10rem;
+  }
 }
 
 .chups-liquid {
@@ -257,6 +359,13 @@
   left: 0;
   top: -10rem;
   z-index: -1;
+
+  @include breakpoint($sm-bp) {
+    width: 32rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .smoke-big {
@@ -270,7 +379,20 @@
 
   background: url(../images/intro/cola/big-smoke.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    top: -10vh;
+    left: -30vh;
+  }
+
+  @include breakpoint($sm-bp) {
+    top: -11rem;
+    left: -7rem;
+    width: 55rem;
+    height: 55rem;
+  }
 }
+
 .smoke-sm {
   // width: 76.2rem;
   // height: 80rem;
@@ -282,6 +404,18 @@
 
   background: url(../images/intro/cola/sm-smoke.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    top: 13vh;
+    left: -17vh;
+  }
+
+  @include breakpoint($sm-bp) {
+    top: -2rem;
+    left: -6rem;
+    width: 30rem;
+    height: 40rem;
+  }
 }
 .ice-sm {
   width: 15vh;
@@ -294,6 +428,11 @@
 
   background: url(../images/intro/cola/sm-ice.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 9rem;
+    height: 12rem;
+  }
 }
 .ice-md {
   width: 32vh;
@@ -306,6 +445,14 @@
 
   background: url(../images/intro/cola/double-ice.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 15rem;
+    height: 32rem;
+
+    top: 3%;
+    left: 5%;
+  }
 }
 .ice-big {
   width: 13vh;
@@ -318,6 +465,13 @@
 
   background: url(../images/intro/cola/big-ice.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 5rem;
+    height: 14rem;
+
+    left: 92%;
+  }
 }
 
 .l1 {
@@ -348,6 +502,17 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @include breakpoint($lg-bp) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include breakpoint($sm-bp) {
+    top: 58vh;
+
+    gap: 1.6rem;
+  }
 }
 
 .is-nav__item {
@@ -361,9 +526,18 @@
 
   cursor: pointer;
 
+  @include breakpoint($sm-bp) {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
+
   &.active {
     .icon-nav-circle {
       display: block;
+
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
     }
     .is-nav__item-icon {
       opacity: 1;
@@ -389,4 +563,9 @@
 
   opacity: 0.4;
   transition: opacity 0.2s ease;
+
+  @include breakpoint($sm-bp) {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
 }
