@@ -19,3 +19,24 @@ if (document.querySelector(".weworks")) {
     },
   }).mount();
 }
+if (document.querySelector(".catalog-main__slider")) {
+  var weworksSlider = new Splide(".catalog-main__slider", {
+    arrows: false,
+    pagination: false,
+    gap: "1.6rem",
+
+    mediaQuery: "min",
+    breakpoints: {
+      921: {
+        destroy: true,
+      },
+      501: {
+        perPage: 2,
+        fixedWidth: null,
+      },
+      10: {
+        fixedWidth: "27rem",
+      },
+    },
+  }).mount();
+}

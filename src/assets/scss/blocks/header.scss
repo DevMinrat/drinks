@@ -84,6 +84,17 @@
       .burger-menu.menu-on .burger {
         background: rgba(#595187, 0);
       }
+
+      .nav-list__item-arrow {
+        fill: $primary;
+      }
+      & .nav-list__item-link--droplink:hover + svg {
+        fill: $accent;
+
+        @include breakpoint($lg-bp) {
+          fill: $accent;
+        }
+      }
     }
 
     .logo-use {
@@ -497,7 +508,7 @@
   width: 10px;
 }
 
-.header-links__soc-mob {
+.header-links__soc-mob.footer-info__soc {
   display: none;
 
   @include breakpoint($lg-bp) {

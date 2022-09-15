@@ -5,10 +5,6 @@
   align-items: center;
 
   padding: 0.3rem 0;
-
-  @include breakpoint($sm-bp) {
-    display: none;
-  }
 }
 
 .breadcrumb {
@@ -29,6 +25,11 @@
   line-height: 1.1;
 
   transition: all 0.2s ease;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+    padding: 0.4rem 0;
+  }
 }
 
 .breadcrumb span {

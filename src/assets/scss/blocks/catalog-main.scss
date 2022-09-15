@@ -1,5 +1,5 @@
 .catalog-main__inner {
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(3, 37.8rem);
   align-items: flex-end;
   justify-content: space-between;
@@ -7,6 +7,26 @@
   height: 32.8rem;
 
   margin-bottom: 10rem;
+
+  @include breakpoint($lg-bp) {
+    display: flex !important;
+  }
+
+  @include breakpoint($sm-bp) {
+    height: 25rem;
+  }
+}
+
+.catalog-main__slider {
+  margin-bottom: 10rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6rem;
+  }
+
+  .splide__track {
+    overflow: unset;
+  }
 }
 
 .cm-item {
@@ -26,6 +46,12 @@
 
   transition: all 0.2s ease;
 
+  @include breakpoint($sm-bp) {
+    height: 23rem;
+
+    padding: 0 5rem 1.6rem;
+  }
+
   &--noalco {
     background: #ffede8;
 
@@ -38,11 +64,20 @@
 
       filter: blur(10px);
       opacity: 0.3;
+
+      @include breakpoint($sm-bp) {
+        width: 10rem;
+        height: 16rem;
+      }
     }
     img {
       width: 12.6rem;
       height: auto;
       top: -4rem;
+
+      @include breakpoint($sm-bp) {
+        width: 10rem;
+      }
     }
   }
   &--alco {
@@ -57,11 +92,20 @@
 
       filter: blur(7px);
       opacity: 0.4;
+
+      @include breakpoint($sm-bp) {
+        width: 9.6rem;
+        height: 16rem;
+      }
     }
 
     img {
       width: 11.6rem;
       top: -6rem;
+
+      @include breakpoint($sm-bp) {
+        width: 9.6rem;
+      }
     }
   }
   &--grocery {
@@ -76,11 +120,28 @@
 
       filter: blur(10px);
       opacity: 0.2;
+
+      @include breakpoint($sm-bp) {
+        width: 18rem;
+        height: 14rem;
+      }
     }
 
     img {
       width: 25.1rem;
       top: -3rem;
+
+      @include breakpoint($sm-bp) {
+        width: 18rem;
+      }
+    }
+
+    &:last-child {
+      .cm-item__name {
+        @include breakpoint($sm-bp) {
+          margin-bottom: 4rem;
+        }
+      }
     }
   }
 
@@ -88,6 +149,10 @@
     height: 32.8rem;
 
     border-color: $accent;
+
+    @include breakpoint($sm-bp) {
+      height: 25rem;
+    }
 
     .cm-item__img-wrapper {
       transform: scale(1.2);
@@ -128,10 +193,20 @@
   color: #392f76;
 
   margin-top: auto;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+  }
 }
 
 .cm-popular {
+  position: relative;
+
   margin-bottom: 8rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 12rem;
+  }
 }
 
 .cm-popular__title-wrapper {
@@ -150,6 +225,12 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $primary;
+
+  @include breakpoint($sm-bp) {
+    font-size: 3.6rem;
+
+    margin-bottom: 3.2rem;
+  }
 }
 
 .cm-popular__link {
@@ -158,6 +239,30 @@
 
   color: $primary;
 
+  @include breakpoint($sm-bp) {
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    width: 100%;
+    max-width: 32.8rem;
+    height: 4.8rem;
+
+    color: white;
+    justify-content: center;
+
+    background-color: $accent;
+    border: 0.1rem solid $accent;
+    box-shadow: 0px 1rem 2.4rem rgba(255, 104, 0, 0.19);
+    border-radius: 6rem;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
   svg {
     width: 2.4rem;
     height: 2.4rem;
@@ -165,6 +270,10 @@
     fill: $primary;
 
     margin-left: 0.8rem;
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &:hover {

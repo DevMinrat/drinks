@@ -3,6 +3,10 @@
 
   .breadcrumb-wrapper {
     margin-bottom: 4.8rem;
+
+    @include breakpoint($lg-bp) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -11,11 +15,23 @@
   grid-template-areas:
     "pg ph"
     "pg pd"
-    "pg p";
+    "pg pd";
   grid-template-columns: 56rem 58rem;
   column-gap: 6rem;
 
   margin-bottom: 5.4rem;
+
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 50rem 56rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    grid-template-areas:
+      "ph"
+      "pg"
+      "pd";
+    grid-template-columns: 1fr;
+  }
 }
 
 .product-gallery {
@@ -30,10 +46,24 @@
 .product__img {
   width: 100%;
   height: auto;
+
+  @include breakpoint($lg-bp) {
+    max-width: 55rem;
+  }
+}
+
+.product__img-wrapper {
+  @include breakpoint($lg-bp) {
+    margin-bottom: 4rem;
+  }
 }
 
 .product-producer {
   margin-bottom: 6rem;
+
+  @include breakpoint($lg-bp) {
+    margin-bottom: 4rem;
+  }
 }
 
 .product-header {
@@ -52,6 +82,12 @@
   color: $primary;
 
   margin-bottom: 1rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 4.8rem;
+
+    margin-bottom: 0.4rem;
+  }
 }
 
 .product-header__descr {
@@ -73,8 +109,14 @@
     rgba(255, 255, 255, 0) 0%
   );
   background-position: top 1.5rem center;
-  background-size: 0.6rem 0.1rem;
+  background-size: 6px 0.1rem;
   background-repeat: repeat-x;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+
+    background: none;
+  }
 
   & + & {
     margin-top: 1rem;
@@ -98,6 +140,11 @@
   padding-left: 0.8rem;
 
   background-color: #fff;
+
+  @include breakpoint($sm-bp) {
+    padding-left: 0;
+    padding-top: 0.8rem;
+  }
 }
 
 .product-order {
@@ -113,6 +160,13 @@
   margin-bottom: 6rem;
 
   border-bottom: 0.2rem solid rgba(89, 81, 135, 0.2);
+
+  @include breakpoint($sm-bp) {
+    column-gap: 2.4rem;
+    justify-content: space-between;
+
+    margin-bottom: 3.4rem;
+  }
 }
 
 .product-info__tabs-btn {
@@ -127,6 +181,15 @@
   padding: 2.4rem 1.6rem;
 
   transition: color 0.2s linear;
+
+  @include breakpoint($sm-bp) {
+    height: unset;
+
+    font-size: 1.7rem;
+    color: $primary;
+
+    padding: 1rem 0.2rem;
+  }
 
   &:hover {
     color: $accent;
@@ -156,15 +219,27 @@
 
   & * {
     color: $primary;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.4rem);
+    }
   }
 
   * + * {
     margin-top: 1.6rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 1.2rem;
+    }
   }
 
   h5 {
     font-weight: 700;
     font-size: 2.2rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+    }
   }
 
   &.certificates {

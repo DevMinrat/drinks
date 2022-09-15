@@ -12,10 +12,10 @@ title: Гаталог - общиий
             </nav>
         </div>
         <h1 class="page-title">Каталог</h1>
-        <div class="splide">
+        <div class="catalog-main__slider splide">
             <div class="splide__track">
                 <div class="catalog-main__inner splide__list">
-                    <a class="catalog-main__item cm-item cm-item--noalco" href="#">
+                    <a class="catalog-main__item cm-item splide__slide cm-item--noalco" href="#">
                         <div class="cm-item__img-wrapper">
                             <div class="cm-item__img-shadow"
                                 style="background-image: url(assets/images/catalog-main/cm-1.png);">
@@ -24,7 +24,7 @@ title: Гаталог - общиий
                         </div>
                         <p class="cm-item__name">Безалкогольные напитки</p>
                     </a>
-                    <a class="catalog-main__item cm-item cm-item--alco" href="#">
+                    <a class="catalog-main__item cm-item splide__slide cm-item--alco" href="#">
                         <div class="cm-item__img-wrapper">
                             <div class="cm-item__img-shadow"
                                 style="background-image: url(assets/images/catalog-main/cm-2.png);">
@@ -33,7 +33,7 @@ title: Гаталог - общиий
                         </div>
                         <p class="cm-item__name">слабоалкогольные напитки</p>
                     </a>
-                    <a class="catalog-main__item cm-item cm-item--grocery" href="#">
+                    <a class="catalog-main__item cm-item splide__slide cm-item--grocery" href="#">
                         <div class="cm-item__img-wrapper">
                             <div class="cm-item__img-shadow"
                                 style="background-image: url(assets/images/catalog-main/cm-3.png);">
@@ -47,126 +47,124 @@ title: Гаталог - общиий
         </div>
 
         <div class="cm-popular">
-            <div class="container">
-                <div class="cm-popular__title-wrapper">
-                    <h2 class="cm-popular__title">Популярные товары</h2>
-                    <a class="cm-popular__link" href="#">
-                        Показать все
+            <div class="cm-popular__title-wrapper">
+                <h2 class="cm-popular__title">Популярные товары</h2>
+                <a class="cm-popular__link" href="#">
+                    Показать все
+                    <svg>
+                        <use href="#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="popular__inner">
+                <a class="mproduct-item" href="#">
+                    <svg class="mproduct-item__bubbles mustard">
+                        <use href="#pop-item-bg"></use>
+                    </svg>
+                    <div class="mproduct-item__img-wrapper">
+                        <div class="mproduct-item__img-shadow"
+                            style="background-image: url(assets/images/popular/pop-1.png);"></div>
+                        <img class="mproduct-item__img" src="assets/images/popular/pop-1.png" alt="">
+                    </div>
+                    <p class="mproduct-item__name">Abrau Vinonade</p>
+                    <p class="mproduct-item__descr">Напиток Vinonade, Россия, 375 мл</p>
+                    <button class="mproduct-item__link hollow-btn">
+                        Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="popular__inner">
-                    <div class="mproduct-item" href="#">
-                        <svg class="mproduct-item__bubbles mustard">
-                            <use href="#pop-item-bg"></use>
-                        </svg>
-                        <div class="mproduct-item__img-wrapper">
-                            <div class="mproduct-item__img-shadow"
-                                style="background-image: url(assets/images/popular/pop-1.png);"></div>
-                            <img class="mproduct-item__img" src="assets/images/popular/pop-1.png" alt="">
-                        </div>
-                        <p class="mproduct-item__name">Abrau Vinonade</p>
-                        <p class="mproduct-item__descr">Напиток Vinonade, Россия, 375 мл</p>
-                        <a class="mproduct-item__link hollow-btn" href="#">
-                            Подробнее
-                            <svg>
-                                <use href="#arrow"></use>
-                            </svg>
-                        </a>
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
+                    <svg class="mproduct-item__bubbles violet">
+                        <use href="#pop-item-bg"></use>
+                    </svg>
+                    <div class="mproduct-item__img-wrapper">
+                        <div class="mproduct-item__img-shadow"
+                            style="background-image: url(assets/images/popular/pop-2.png);"></div>
+                        <img class="mproduct-item__img" src="assets/images/popular/pop-2.png" alt="">
                     </div>
-                    <div class="mproduct-item" href="#">
-                        <svg class="mproduct-item__bubbles violet">
-                            <use href="#pop-item-bg"></use>
+                    <p class="mproduct-item__name">Lotte Milkis</p>
+                    <p class="mproduct-item__descr">Напиток, Корея, 375 мл</p>
+                    <button class="mproduct-item__link hollow-btn">
+                        Подробнее
+                        <svg>
+                            <use href="#arrow"></use>
                         </svg>
-                        <div class="mproduct-item__img-wrapper">
-                            <div class="mproduct-item__img-shadow"
-                                style="background-image: url(assets/images/popular/pop-2.png);"></div>
-                            <img class="mproduct-item__img" src="assets/images/popular/pop-2.png" alt="">
-                        </div>
-                        <p class="mproduct-item__name">Lotte Milkis</p>
-                        <p class="mproduct-item__descr">Напиток, Корея, 375 мл</p>
-                        <a class="mproduct-item__link hollow-btn" href="#">
-                            Подробнее
-                            <svg>
-                                <use href="#arrow"></use>
-                            </svg>
-                        </a>
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
+                    <svg class="mproduct-item__bubbles brown">
+                        <use href="#pop-item-bg"></use>
+                    </svg>
+                    <div class="mproduct-item__img-wrapper">
+                        <div class="mproduct-item__img-shadow"
+                            style="background-image: url(assets/images/popular/pop-3.png);"></div>
+                        <img class="mproduct-item__img" src="assets/images/popular/pop-3.png" alt="">
                     </div>
-                    <div class="mproduct-item" href="#">
-                        <svg class="mproduct-item__bubbles brown">
-                            <use href="#pop-item-bg"></use>
+                    <p class="mproduct-item__name">Abrau Vinonade</p>
+                    <p class="mproduct-item__descr">Кофейный напиток, Корея, 240 мл</p>
+                    <button class="mproduct-item__link hollow-btn">
+                        Подробнее
+                        <svg>
+                            <use href="#arrow"></use>
                         </svg>
-                        <div class="mproduct-item__img-wrapper">
-                            <div class="mproduct-item__img-shadow"
-                                style="background-image: url(assets/images/popular/pop-3.png);"></div>
-                            <img class="mproduct-item__img" src="assets/images/popular/pop-3.png" alt="">
-                        </div>
-                        <p class="mproduct-item__name">Abrau Vinonade</p>
-                        <p class="mproduct-item__descr">Кофейный напиток, Корея, 240 мл</p>
-                        <a class="mproduct-item__link hollow-btn" href="#">
-                            Подробнее
-                            <svg>
-                                <use href="#arrow"></use>
-                            </svg>
-                        </a>
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
+                    <svg class="mproduct-item__bubbles aloe">
+                        <use href="#pop-item-bg"></use>
+                    </svg>
+                    <div class="mproduct-item__img-wrapper">
+                        <div class="mproduct-item__img-shadow"
+                            style="background-image: url(assets/images/popular/pop-4.png);"></div>
+                        <img class="mproduct-item__img" src="assets/images/popular/pop-4.png" alt="">
                     </div>
-                    <div class="mproduct-item" href="#">
-                        <svg class="mproduct-item__bubbles aloe">
-                            <use href="#pop-item-bg"></use>
+                    <p class="mproduct-item__name">Abrau Vinonade</p>
+                    <p class="mproduct-item__descr">Напиток сокосодержащий, Корея, 240 мл</p>
+                    <button class="mproduct-item__link hollow-btn">
+                        Подробнее
+                        <svg>
+                            <use href="#arrow"></use>
                         </svg>
-                        <div class="mproduct-item__img-wrapper">
-                            <div class="mproduct-item__img-shadow"
-                                style="background-image: url(assets/images/popular/pop-4.png);"></div>
-                            <img class="mproduct-item__img" src="assets/images/popular/pop-4.png" alt="">
-                        </div>
-                        <p class="mproduct-item__name">Abrau Vinonade</p>
-                        <p class="mproduct-item__descr">Напиток сокосодержащий, Корея, 240 мл</p>
-                        <a class="mproduct-item__link hollow-btn" href="#">
-                            Подробнее
-                            <svg>
-                                <use href="#arrow"></use>
-                            </svg>
-                        </a>
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
+                    <svg class="mproduct-item__bubbles violet">
+                        <use href="#pop-item-bg"></use>
+                    </svg>
+                    <div class="mproduct-item__img-wrapper">
+                        <div class="mproduct-item__img-shadow"
+                            style="background-image: url(assets/images/popular/pop-5.png);"></div>
+                        <img class="mproduct-item__img" src="assets/images/popular/pop-5.png" alt="">
                     </div>
-                    <div class="mproduct-item" href="#">
-                        <svg class="mproduct-item__bubbles violet">
-                            <use href="#pop-item-bg"></use>
+                    <p class="mproduct-item__name">Abrau Vinonade</p>
+                    <p class="mproduct-item__descr">Газированный напиток, Корея, 345 мл</p>
+                    <button class="mproduct-item__link hollow-btn">
+                        Подробнее
+                        <svg>
+                            <use href="#arrow"></use>
                         </svg>
-                        <div class="mproduct-item__img-wrapper">
-                            <div class="mproduct-item__img-shadow"
-                                style="background-image: url(assets/images/popular/pop-5.png);"></div>
-                            <img class="mproduct-item__img" src="assets/images/popular/pop-5.png" alt="">
-                        </div>
-                        <p class="mproduct-item__name">Abrau Vinonade</p>
-                        <p class="mproduct-item__descr">Газированный напиток, Корея, 345 мл</p>
-                        <a class="mproduct-item__link hollow-btn" href="#">
-                            Подробнее
-                            <svg>
-                                <use href="#arrow"></use>
-                            </svg>
-                        </a>
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
+                    <svg class="mproduct-item__bubbles tomato">
+                        <use href="#pop-item-bg"></use>
+                    </svg>
+                    <div class="mproduct-item__img-wrapper">
+                        <div class="mproduct-item__img-shadow"
+                            style="background-image: url(assets/images/popular/pop-6.png);"></div>
+                        <img class="mproduct-item__img" src="assets/images/popular/pop-6.png" alt="">
                     </div>
-                    <div class="mproduct-item" href="#">
-                        <svg class="mproduct-item__bubbles tomato">
-                            <use href="#pop-item-bg"></use>
+                    <p class="mproduct-item__name">Abrau Vinonade</p>
+                    <p class="mproduct-item__descr">Газированный напиток, Польша, 240 мл</p>
+                    <button class="mproduct-item__link hollow-btn">
+                        Подробнее
+                        <svg>
+                            <use href="#arrow"></use>
                         </svg>
-                        <div class="mproduct-item__img-wrapper">
-                            <div class="mproduct-item__img-shadow"
-                                style="background-image: url(assets/images/popular/pop-6.png);"></div>
-                            <img class="mproduct-item__img" src="assets/images/popular/pop-6.png" alt="">
-                        </div>
-                        <p class="mproduct-item__name">Abrau Vinonade</p>
-                        <p class="mproduct-item__descr">Газированный напиток, Польша, 240 мл</p>
-                        <a class="mproduct-item__link hollow-btn" href="#">
-                            Подробнее
-                            <svg>
-                                <use href="#arrow"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                    </button>
+                </a>
             </div>
         </div>
     </div>

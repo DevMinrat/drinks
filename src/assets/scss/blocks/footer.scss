@@ -12,6 +12,10 @@
   .wave-wrapper {
     top: -5rem;
     bottom: unset;
+
+    @include breakpoint($sm-bp) {
+      top: -5.3rem;
+    }
   }
 }
 
