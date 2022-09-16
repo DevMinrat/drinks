@@ -1,5 +1,5 @@
 ---
-layout: white-page
+layout: product-tpl
 title: Milkis
 ---
 
@@ -98,17 +98,19 @@ title: Milkis
                     <p>Вода, сахар, сухое молоко, диоксид углерода (Е290),фосфорная кислота, лимонная кислота (Е330),
                         витамин А, витамин D3.</p>
                 </div>
-                <div class="product-info__tabs-pane tabs-pane certificates">
-                    <div class="certificates-wrapper">
-                        <a class="certificates-item" href="assets/images/product/certificate.jpg">
-                            <img src="assets/images/product/certificate.jpg" alt="">
-                        </a>
-                        <a class="certificates-item" href="assets/images/product/certificate.jpg">
-                            <img src="assets/images/product/certificate.jpg" alt="">
-                        </a>
-                        <a class="certificates-item" href="assets/images/product/certificate.jpg">
-                            <img src="assets/images/product/certificate.jpg" alt="">
-                        </a>
+                <div class="product-info__tabs-pane tabs-pane certificates splide">
+                    <div class="splide__track">
+                        <div class="certificates-wrapper splide__list">
+                            <a class="certificates-item splide__slide" href="assets/images/product/certificate.jpg">
+                                <img src="assets/images/product/certificate.jpg" alt="">
+                            </a>
+                            <a class="certificates-item splide__slide" href="assets/images/product/certificate.jpg">
+                                <img src="assets/images/product/certificate.jpg" alt="">
+                            </a>
+                            <a class="certificates-item splide__slide" href="assets/images/product/certificate.jpg">
+                                <img src="assets/images/product/certificate.jpg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-info__tabs-pane tabs-pane">
@@ -128,5 +130,11 @@ title: Milkis
                 </div>
             </div>
         </div>
+        <button class="product-order--mob filled-btn">
+            <span>Оставить заявку</span>
+            <svg>
+                <use href="#arrow"></use>
+            </svg>
+        </button>
     </div>
 </section>

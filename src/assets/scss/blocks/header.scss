@@ -11,10 +11,15 @@
   height: 8.8rem;
 
   transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
   transform: translateY(0);
 
   background-color: white;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+  @include breakpoint($sm-bp) {
+    height: 7rem;
+  }
 
   .nav-list__item-link {
     color: $primary;
@@ -93,6 +98,12 @@
 
         @include breakpoint($lg-bp) {
           fill: $accent;
+        }
+      }
+
+      & .menu.active {
+        .nav-list__item-arrow {
+          fill: white;
         }
       }
     }

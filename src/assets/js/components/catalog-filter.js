@@ -38,10 +38,12 @@ if (cpFilterTriggers.length > 0) {
 
     filterItem.addEventListener("click", (e) => {
       let target = e.target;
-
-      if (target.classList.contains("filter-list__item-close")) {
+      if (
+        target.classList.contains("filter-list__item-close") ||
+        target.nodeName === "use"
+      ) {
         filterItem.remove();
-        document.querySelector(`#${name}`).checked = false;
+        document.querySelector(`[name='${name}']`).checked = false;
         showFilterReset();
       }
     });
@@ -71,5 +73,21 @@ if (cpFilterTriggers.length > 0) {
   filterReset.addEventListener("click", () => {
     filterList.innerHTML = "";
     showFilterReset();
+  });
+
+  // mob version
+
+  const filterMobTrigger = document.querySelector(".cp-content__header-mob");
+  const filterContent = document.querySelector(".cp-content__filter-item");
+  const filterMobBack = document.querySelector(".filter-mob__header-back");
+
+  filterMobTrigger.addEventListener("click", () => {
+    filterContent.classList.add("active");
+    header.classList.remove("top");
+    scrollLock.disablePageScroll();
+  });
+  filterMobBack.addEventListener("click", () => {
+    filterContent.classList.remove("active");
+    scrollLock.enablePageScroll();
   });
 }

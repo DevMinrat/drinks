@@ -14,7 +14,11 @@
     bottom: unset;
 
     @include breakpoint($sm-bp) {
-      top: -5.3rem;
+      top: -1.5rem;
+
+      .wave-animated {
+        width: 100vw;
+      }
     }
   }
 }

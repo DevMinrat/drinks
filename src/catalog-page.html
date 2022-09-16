@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-tpl
 title: Безалкогольные напитки
 ---
 
@@ -25,8 +25,19 @@ title: Безалкогольные напитки
     <div class="container">
         <div class="catalog-page__content cp-content">
             <form class="cp-content__header">
-                <!-- <div class="cp-content__header-mob"></div> -->
-                <div class="cp-content__filter-item">
+                <div class="cp-content__header-mob">
+                    Фильтр
+                    <svg>
+                        <use href="#filter"></use>
+                    </svg>
+                </div>
+                <div class="cp-content__filter-item" data-scroll-lock-scrollable>
+                    <div class="filter-mob__header">
+                        <svg class="filter-mob__header-back">
+                            <use href="#chevron"></use>
+                        </svg>
+                        <p class="filter-mob__header-title">ФИЛЬТР</p>
+                    </div>
                     <div class="cp-content__filter-trigger">
                         <span>Производитель</span>
                         <svg>
@@ -126,8 +137,6 @@ title: Безалкогольные напитки
                         <button class="cp-filter__modal-btn filled-btn" type="submit">Применить</button>
                     </div>
                 </div>
-
-
                 <div class="cp-content__filter-list">
                     <div class="filter-list__content">
                     </div>
@@ -135,7 +144,7 @@ title: Безалкогольные напитки
                 </div>
             </form>
             <div class="cp-content__inner">
-                <div class="mproduct-item">
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles mustard">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -146,14 +155,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Напиток Vinonade, Россия, 375 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles violet">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -164,14 +173,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Lotte Milkis</p>
                     <p class="mproduct-item__descr">Напиток, Корея, 375 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles brown">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -182,14 +191,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Кофейный напиток, Корея, 240 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles aloe">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -200,14 +209,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Напиток сокосодержащий, Корея, 240 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles violet">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -218,14 +227,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Газированный напиток, Корея, 345 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles tomato">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -236,14 +245,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Газированный напиток, Польша, 240 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles tomato">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -254,14 +263,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Газированный напиток, Польша, 240 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles orange">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -272,14 +281,14 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Напиток газированный, Россия, 375 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
-                <div class="mproduct-item">
+                    </button>
+                </a>
+                <a class="mproduct-item" href="#">
                     <svg class="mproduct-item__bubbles aloe">
                         <use href="#pop-item-bg"></use>
                     </svg>
@@ -290,13 +299,13 @@ title: Безалкогольные напитки
                     </div>
                     <p class="mproduct-item__name">Abrau Vinonade</p>
                     <p class="mproduct-item__descr">Напиток сокосодержащий, Корея, 240 мл</p>
-                    <a class="mproduct-item__link hollow-btn" href="#">
+                    <button class="mproduct-item__link hollow-btn">
                         Подробнее
                         <svg>
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
-                </div>
+                    </button>
+                </a>
             </div>
             <div class="catalog-page__nav">
                 <span class="catalog-page__nav-item disable">

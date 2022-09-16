@@ -4,6 +4,8 @@
   height: 100vh;
 
   @include breakpoint($sm-bp) {
+    min-height: 75rem;
+
     padding-bottom: 5.6rem;
   }
 }
@@ -509,7 +511,7 @@
   }
 
   @include breakpoint($sm-bp) {
-    top: 58vh;
+    top: 58%;
 
     gap: 1.6rem;
   }
