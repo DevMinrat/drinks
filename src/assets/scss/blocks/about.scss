@@ -22,6 +22,11 @@
 
   background: url(../images/about/about-bg.jpg) no-repeat;
   background-size: cover;
+
+  .raspberry-single {
+    right: 8.5rem;
+    bottom: -6rem;
+  }
 }
 
 .about-intro__descr {
@@ -60,4 +65,129 @@
       fill: transparent;
     }
   }
+}
+
+.about-info {
+  padding: 8.8rem 0 6rem;
+}
+
+.about-info__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 49rem);
+  gap: 3.8rem 13.5rem;
+}
+
+.about-info__item-title {
+  font-weight: 700;
+  font-size: 2.6rem;
+
+  margin-bottom: 1.6rem;
+}
+
+.about-info__item-descr {
+  ul {
+    list-style: disc outside;
+
+    padding-left: 2.5rem;
+  }
+
+  li + li {
+    margin-top: 0.6rem;
+  }
+}
+
+.about-trust {
+  position: relative;
+
+  padding-bottom: 5rem;
+
+  .section-heading {
+    margin-bottom: 2.2rem;
+  }
+
+  .orange-part {
+    left: 0;
+    bottom: -8rem;
+  }
+}
+
+.about-trust__descr {
+  width: 100%;
+  max-width: 69rem;
+
+  margin-bottom: 5.3rem;
+}
+
+.about-trust__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 3rem;
+
+  img {
+    width: 100%;
+    max-width: 27.6rem;
+
+    filter: grayscale(1);
+    opacity: 0.4;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+  }
+}
+
+.about-price {
+  overflow: hidden;
+
+  padding: 4rem 0 1rem;
+
+  background: linear-gradient(180deg, #fff4e7 0%, rgba(255, 244, 231, 0) 100%);
+}
+
+.about-price__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-price__content {
+  margin-right: 4rem;
+}
+
+.about-price__title {
+  width: 100%;
+  max-width: 56.3rem;
+
+  margin-bottom: 3.3rem;
+}
+
+.about-order__btn {
+  max-width: 28.2rem;
+}
+
+.about-price__img-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    width: 38.1rem;
+    height: 38.1rem;
+
+    user-select: none;
+    background: rgba(255, 104, 0, 0.5);
+    filter: blur(10rem);
+  }
+}
+
+.about-price__img {
+  width: 100%;
+  max-width: 57.7rem;
 }

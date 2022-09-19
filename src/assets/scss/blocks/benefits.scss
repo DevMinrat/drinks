@@ -10,6 +10,17 @@
       display: none;
     }
   }
+
+  .orange-part {
+    left: 4.6rem;
+    top: 35rem;
+  }
+  .orange-half {
+    right: 4rem;
+    bottom: -10rem;
+
+    z-index: 10;
+  }
 }
 
 .benefits-header {
@@ -286,21 +297,4 @@
       font-size: max(12px, 1.4rem);
     }
   }
-}
-
-.orange-part {
-  left: 4.6rem;
-  top: 35rem;
-
-  width: 100%;
-  max-width: 18.7rem;
-}
-.orange-half {
-  right: 4rem;
-  bottom: -10rem;
-
-  z-index: 10;
-
-  width: 100%;
-  max-width: 22.1rem;
 }
