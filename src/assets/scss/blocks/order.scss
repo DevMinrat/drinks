@@ -7,58 +7,109 @@
 
   &.dark {
     .order-item__name {
-      position: relative;
-
-      width: max-content;
-
-      font-size: max(12px, 1.4rem);
       color: white;
-
-      margin-bottom: 1rem;
-
-      &.req::after {
-        content: "*";
-
-        font-size: max(12px, 1.4rem);
-        color: #f04c4c;
-        margin-left: 0.1rem;
-      }
 
       @include breakpoint($sm-bp) {
         color: #615991;
-        font-size: max(12px, 1.2rem);
       }
     }
     .order-item__input {
-      width: 100%;
-
-      padding-bottom: 1rem;
-
       color: white;
-      font-size: 2rem;
 
-      border: none;
-      outline: none;
-      background-color: transparent;
       border-bottom: 1px solid #9c97ba;
 
       @include breakpoint($sm-bp) {
-        font-size: 1.6rem;
-
         border-bottom-color: #fff;
       }
 
       &::placeholder {
-        font-weight: 400;
-        font-size: 2rem;
-        line-height: 130%;
         color: #615991;
 
         @include breakpoint($sm-bp) {
-          font-size: 1.6rem;
           color: #9c97ba;
         }
       }
+    }
+  }
+}
+
+.order-item__name {
+  position: relative;
+
+  width: max-content;
+
+  color: $primary;
+  font-size: max(12px, 1.4rem);
+
+  margin-bottom: 1rem;
+
+  &.req::after {
+    content: "*";
+
+    font-size: max(12px, 1.4rem);
+    color: #f04c4c;
+    margin-left: 0.1rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    color: #9c97ba;
+    font-size: max(12px, 1.2rem);
+  }
+}
+.order-item__input {
+  width: 100%;
+
+  padding-bottom: 1rem;
+
+  color: #5c548f;
+  font-size: 2rem;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #9c97ba;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+  }
+
+  &::placeholder {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #9c97ba;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+    }
+  }
+}
+.order-item__textarea {
+  width: 100%;
+  min-height: 22rem;
+
+  color: #5c548f;
+  font-size: 2rem;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #9c97ba;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+  }
+
+  &::placeholder {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #9c97ba;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
     }
   }
 }

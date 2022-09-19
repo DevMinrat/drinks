@@ -1,0 +1,175 @@
+.partnership {
+  position: relative;
+
+  .page-title {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.partnership__inner {
+  padding-bottom: 10rem;
+}
+
+.partnership-main__descr {
+  width: 100%;
+  max-width: 69rem;
+
+  margin-bottom: 6.7rem;
+}
+
+.partnership-info {
+  display: grid;
+  grid-template-columns: repeat(2, 51.5rem);
+  gap: 2.4rem 10rem;
+
+  ol {
+    list-style: decimal inside;
+  }
+  ul {
+    list-style: disc inside;
+  }
+
+  li + li {
+    margin-top: 1rem;
+  }
+}
+
+.partnership-info__item-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: $primary;
+
+  margin-bottom: 2rem;
+}
+
+.partnership-wholesale {
+  position: relative;
+
+  padding: 12rem 0 12.5rem;
+
+  background: $primary;
+
+  .section-heading {
+    color: white;
+
+    margin-bottom: 5.2rem;
+  }
+}
+
+.pw-content {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 30.8rem);
+  gap: 4.5rem 10.4rem;
+
+  padding-top: 4.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3.4rem;
+    top: 0;
+    z-index: 1;
+
+    width: 83.9rem;
+    height: 2.8rem;
+
+    background: url(../images/partnership/pw-line.svg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.pw-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3.4rem;
+    top: -4rem;
+    z-index: 2;
+
+    width: 1.6rem;
+    height: 1.6rem;
+
+    background: $accent;
+    border-radius: 50%;
+  }
+}
+
+.pw-item__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 8.5rem;
+  height: 8.5rem;
+
+  margin-bottom: 1.6rem;
+
+  background: url(../images/partnership/pw-star.svg) no-repeat;
+  background-size: cover;
+
+  img {
+    width: 100%;
+    max-width: 4rem;
+  }
+}
+
+.pw-item__title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: white;
+
+  margin-bottom: 0.8rem;
+}
+
+.pw-item__descr {
+  color: white;
+
+  a {
+    color: white;
+    font-weight: 700;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.pwholesale-order {
+  position: relative;
+
+  padding: 12rem 0;
+
+  .section-heading {
+    margin-bottom: 3.6rem;
+  }
+
+  .order-item__textarea {
+    margin-bottom: 0.9rem;
+  }
+}
+
+.pwholesale-form {
+  display: grid;
+  grid-template-columns: repeat(2, 48rem);
+  gap: 2.4rem 12rem;
+}
+
+.partnership-clients {
+  padding: 12rem 0;
+
+  background: linear-gradient(180deg, #fff4e7 0%, rgba(255, 244, 231, 0) 100%);
+
+  .wave-wrapper {
+    display: block;
+  }
+}
+
+.partnership-marketplaces {
+  padding: 12rem 0;
+
+  background: #edecf3;
+}

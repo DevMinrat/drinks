@@ -25,6 +25,11 @@
 
   .page-title {
     color: white;
+    margin-bottom: 12rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 5rem;
+    }
   }
 }
 
