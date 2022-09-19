@@ -1,0 +1,63 @@
+.about {
+  position: relative;
+
+  .page-title {
+    color: white;
+  }
+
+  .breadcrumb-wrapper {
+    a,
+    span {
+      color: white;
+    }
+  }
+}
+
+.about-intro {
+  position: relative;
+
+  height: 64rem;
+
+  padding-top: 12rem;
+
+  background: url(../images/about/about-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.about-intro__descr {
+  width: 100%;
+  max-width: 58.5rem;
+
+  color: white;
+}
+
+.about__link {
+  position: absolute;
+  right: 26%;
+  bottom: 10%;
+  z-index: 1;
+
+  max-width: 17.1rem;
+  height: 17.1rem;
+
+  p {
+    max-width: 12rem;
+
+    color: $primary;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-link__star-wrapper {
+    fill: white;
+  }
+
+  &:hover {
+    p {
+      color: $accent;
+    }
+    svg {
+      fill: transparent;
+    }
+  }
+}
