@@ -400,4 +400,13 @@ document.addEventListener("DOMContentLoaded", () => {
       loop: false,
     });
   }
+
+  const contactsForm = document.querySelector(".contacts-form");
+
+  if (contactsForm) {
+    const choices = new Choices(
+      document.getElementById("contacts-form__select"),
+      { searchEnabled: false, itemSelectText: "" }
+    );
+  }
 });

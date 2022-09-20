@@ -1,0 +1,89 @@
+---
+layout: white-page-tpl
+title: Contacts
+---
+
+<section class="contacts">
+    <div class="container">
+        <div class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb" class="breadcrumb">
+                <a href="#">Главная</a>
+                <span aria-current="page">Контакты</span>
+            </nav>
+        </div>
+        <h1 class="page-title">Контакты</h1>
+    </div>
+    <div class="contacts__inner">
+        <iframe class="contacts-map"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A883875ad97687fc76b46422a81726f0d027aadb2c3d9eea06e7ba131f12e2618&amp;source=constructor"></iframe>
+        <div class="container">
+            <div class="contacts-info">
+                <div class="contacts-info__item">
+                    <p class="contacts-info__item-prop">Электронный адрес:</p>
+                    <a class="contacts-info__item-value" href="mailto:office@importdrinks.ru">office@importdrinks.ru</a>
+                </div>
+                <div class="contacts-info__item">
+                    <p class="contacts-info__item-prop">Горячая линия:</p>
+                    <a class="contacts-info__item-value" href="tel:123">8 (800) 101-23-03</a>
+                </div>
+                <div class="contacts-info__item">
+                    <p class="contacts-info__item-prop">Адрес:</p>
+                    <p class="contacts-info__item-value">50000 г. Краснодар, Московская, 59/1</p>
+                </div>
+                <div class="contacts-info__item">
+                    <p class="contacts-info__item-prop">График работы:</p>
+                    <p class="contacts-info__item-value">Понедельник – Пятница: с 09:00 до 19:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts-order">
+    <div class="container">
+        <h2 class="section-heading">ОБратная связь</h2>
+        <p class="contacts-order__descr">Свяжитесь с нами, мы с радостью ответим на Ваши вопросы!</p>
+        <form class="contacts-form">
+            <div class="order-form__left">
+                <div class="order-item">
+                    <p class="order-item__name req">Введите ваше имя</p>
+                    <input class="order-item__input" type="text" placeholder="Иванов Иван" required>
+                </div>
+                <div class="order-item">
+                    <p class="order-item__name req">Введите ваш E-mail</p>
+                    <input class="order-item__input" type="email" placeholder="example@mail.ru" required>
+                </div>
+                <div class="order-item">
+                    <p class="order-item__name req">Телефон</p>
+                    <input class="order-item__input" type="tel" placeholder="+7 (928) 123 45 67" required>
+                </div>
+                <div class="order-item">
+                    <p class="order-item__name req">Тема обращения</p>
+                    <select id="contacts-form__select">
+                        <option value="">Выберите тему обращения</option>
+                        <option value="t1">Тема один</option>
+                        <option value="t2">Тема обращения 2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="order-form__right">
+                <div class="order-item">
+                    <p class="order-item__name">Сообщение</p>
+                    <textarea class="order-item__textarea" placeholder="Введите ваше сообщение"></textarea>
+                </div>
+                <div class="order-privacy">
+                    <input class="custom-checkbox" type="checkbox" id="footer-privacy" name="footer-privacy"
+                        value="red">
+                    <label for="footer-privacy">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
+                        персональных данных.</label>
+                </div>
+                <button class="footer-order__btn order-submit filled-btn" type="submit">
+                    Отправить
+                    <svg>
+                        <use href="#arrow"></use>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
