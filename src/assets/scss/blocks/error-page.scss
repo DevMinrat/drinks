@@ -1,17 +1,31 @@
 .page.error {
   .footer {
     display: none;
+
+    @include breakpoint($lg-bp) {
+      display: block;
+    }
   }
 }
 
 .error-page {
   height: 100vh;
-//   height: 89rem;
 
   padding: 4rem;
 
   background: url(../images/404/404-desct-bg.jpg) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    background-size: unset;
+    background-position: 100% 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 1.4rem 0;
+
+    background: url(../images/404/404-mob-bg.jpg) no-repeat;
+    background-size: cover;
+  }
 }
 
 .error-page__logo {
@@ -19,6 +33,19 @@
   height: 8.8rem;
 
   fill: white;
+
+  @include breakpoint($lg-bp) {
+    width: 19.3rem;
+    height: 7.8rem;
+
+    margin-bottom: 6.5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    max-width: 11.7rem;
+    height: 4.2rem;
+  }
 }
 
 .error-page__content {
@@ -26,6 +53,10 @@
   max-width: 53rem;
 
   margin-left: auto;
+
+  @include breakpoint($lg-bp) {
+    margin: 0 auto;
+  }
 }
 
 .error-page__title {
@@ -40,12 +71,51 @@
   color: #ffffff;
 
   margin-bottom: 1.3rem;
+
+  @include breakpoint($lg-bp) {
+    max-width: unset;
+
+    text-align: center;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 3.4rem;
+
+    margin-bottom: 1.5rem;
+  }
+}
+
+.error-page__title-mob {
+  display: none;
+
+  font-family: "Pribambas";
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+
+  margin-bottom: 1.5rem;
+
+  @include breakpoint($lg-bp) {
+    display: block;
+  }
 }
 
 .error-page__descr {
   color: white;
 
   margin-bottom: 3.4rem;
+
+  @include breakpoint($lg-bp) {
+    text-align: center;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2.8rem;
+  }
 }
 
 .error-page__home-btn {
@@ -57,11 +127,25 @@
 
   margin-bottom: 2.4rem;
   padding: 0 3.2rem;
+
+  @include breakpoint($lg-bp) {
+    margin: 0 auto 2.4rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 32.8rem;
+
+    margin-bottom: 1.8rem;
+  }
 }
 
 .error-page__toCatalog {
   color: white;
   font-size: 1.8rem;
+
+  @include breakpoint($lg-bp) {
+    text-align: center;
+  }
 
   a {
     text-decoration: underline;

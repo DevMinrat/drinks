@@ -42,10 +42,12 @@ body {
 }
 
 main {
-  // padding-top: 9.6rem;
-
   &.padding {
     padding-top: 12rem;
+
+    @include breakpoint($sm-bp) {
+      padding-top: 10rem;
+    }
   }
 }
 
@@ -87,6 +89,7 @@ svg {
 @import "blocks/filled-btn.scss";
 @import "blocks/header";
 @import "blocks/order.scss";
+@import "blocks/modal.scss";
 
 @import "blocks/intro.scss";
 @import "blocks/popular.scss";

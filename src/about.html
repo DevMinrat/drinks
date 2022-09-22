@@ -34,7 +34,14 @@ title: About
                 </a>
             </div>
         </div>
-
+        <div class="wave-wrapper">
+            <svg class="wave-animated wa-big">
+                <use href="#wave"></use>
+            </svg>
+            <svg class="wave-animated wa-sm">
+                <use href="#wave-sm"></use>
+            </svg>
+        </div>
     </div>
     <div class="about-info">
         <div class="container">
@@ -78,21 +85,38 @@ title: About
         <p class="about-trust__descr">Вся наша работа — это не просто однократные сделки, это настоящие долгосрочные
             и дружественные отношения с нашими партнерами.</p>
         <div class="about-trust__inner">
-            <img src="assets/images/clients/client-1.png" alt="">
-            <img src="assets/images/clients/client-2.png" alt="">
-            <img src="assets/images/clients/client-3.png" alt="">
-            <img src="assets/images/clients/client-4.png" alt="">
-            <img src="assets/images/clients/client-5.png" alt="">
-            <img src="assets/images/clients/client-6.png" alt="">
-            <img src="assets/images/clients/client-7.png" alt="">
-            <img src="assets/images/clients/client-8.png" alt="">
-            <img src="assets/images/clients/client-9.png" alt="">
-            <img src="assets/images/clients/client-10.png" alt="">
+            <div class="about-trust__top">
+                <img src="assets/images/clients/client-4.png" alt="">
+                <img src="assets/images/clients/client-6.png" alt="">
+                <img src="assets/images/clients/client-2.png" alt="">
+                <img src="assets/images/clients/client-10.png" alt="">
+                <img src="assets/images/clients/client-3.png" alt="">
+                <img src="assets/images/clients/client-1.png" alt="">
+                <img src="assets/images/clients/client-8.png" alt="">
+                <img src="assets/images/clients/client-5.png" alt="">
+                <img src="assets/images/clients/client-7.png" alt="">
+                <img src="assets/images/clients/client-9.png" alt="">
+            </div>
+            <div class="about-trust__bottom">
+                <img src="assets/images/clients/client-1.png" alt="">
+                <img src="assets/images/clients/client-2.png" alt="">
+                <img src="assets/images/clients/client-3.png" alt="">
+                <img src="assets/images/clients/client-4.png" alt="">
+                <img src="assets/images/clients/client-5.png" alt="">
+                <img src="assets/images/clients/client-6.png" alt="">
+                <img src="assets/images/clients/client-7.png" alt="">
+                <img src="assets/images/clients/client-8.png" alt="">
+                <img src="assets/images/clients/client-9.png" alt="">
+                <img src="assets/images/clients/client-10.png" alt="">
+            </div>
         </div>
     </div>
     <div class="wave-wrapper">
-        <svg class="wave-animated">
+        <svg class="wave-animated wa-big">
             <use href="#wave"></use>
+        </svg>
+        <svg class="wave-animated wa-sm">
+            <use href="#wave-sm"></use>
         </svg>
     </div>
 </section>
@@ -103,14 +127,15 @@ title: About
             <div class="about-price__content">
                 <h2 class="about-price__title section-heading">Напишите или позвоните нам, чтобы получить оптовый
                     прайс-лист</h2>
-                <button class="about-order__btn filled-btn">
+                <button class="about-order__btn filled-btn" data-modal="order">
                     Запросить прайс-лист
                     <svg>
                         <use href="#arrow"></use>
                     </svg>
                 </button>
             </div>
-            <div class="about-price__img-wrapper"><img class="about-price__img" src="assets/images/about/about-drinks.png" alt=""></div>
+            <div class="about-price__img-wrapper"><img class="about-price__img"
+                    src="assets/images/about/about-drinks.png" alt=""></div>
         </div>
     </div>
 </div>

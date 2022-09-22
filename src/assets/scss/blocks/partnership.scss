@@ -8,6 +8,10 @@
 
 .partnership__inner {
   padding-bottom: 10rem;
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 4rem;
+  }
 }
 
 .partnership-main__descr {
@@ -15,12 +19,26 @@
   max-width: 69rem;
 
   margin-bottom: 6.7rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+
+    margin-bottom: 2.4rem;
+  }
 }
 
 .partnership-info {
   display: grid;
   grid-template-columns: repeat(2, 51.5rem);
   gap: 2.4rem 10rem;
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 
   ol {
     list-style: decimal inside;
@@ -40,6 +58,12 @@
   color: $primary;
 
   margin-bottom: 2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 1.6rem;
+  }
 }
 
 .partnership-wholesale {
@@ -49,10 +73,18 @@
 
   background: $primary;
 
+  @include breakpoint($sm-bp) {
+    padding: 9rem 0 12rem;
+  }
+
   .section-heading {
     color: white;
 
     margin-bottom: 5.2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 3.2rem;
+    }
   }
 }
 
@@ -64,6 +96,17 @@
   gap: 4.5rem 10.4rem;
 
   padding-top: 4.5rem;
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr;
+
+    padding-top: 0;
+    padding-left: 6.6rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding-left: 5rem;
+  }
 
   &::before {
     content: "";
@@ -77,11 +120,67 @@
 
     background: url(../images/partnership/pw-line.svg) no-repeat;
     background-size: cover;
+
+    @include breakpoint($lg-bp) {
+      width: 1px;
+      height: 100%;
+
+      background: url(../images/partnership/pw-line-mob.svg);
+    }
+
+    @include breakpoint($sm-bp) {
+      left: 0.9rem;
+    }
   }
 }
 
 .pw-item {
   position: relative;
+
+  @include breakpoint($lg-bp) {
+    max-width: 31rem;
+  }
+
+  &:first-of-type {
+    @include breakpoint($lg-bp) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -3.7rem;
+        top: 0;
+        z-index: 2;
+
+        width: 1.1rem;
+        height: 4rem;
+
+        background: $primary;
+        @include breakpoint($sm-bp) {
+          left: -4.6rem;
+        }
+      }
+    }
+  }
+
+  &:last-of-type {
+    @include breakpoint($lg-bp) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -3.7rem;
+        bottom: 0;
+        z-index: 2;
+
+        width: 1.1rem;
+        height: calc(100% - 5.1rem);
+
+        background: $primary;
+
+        @include breakpoint($sm-bp) {
+          left: -4.6rem;
+        }
+      }
+    }
+  }
 
   &::before {
     content: "";
@@ -95,6 +194,20 @@
 
     background: $accent;
     border-radius: 50%;
+
+    @include breakpoint($lg-bp) {
+      top: 4rem;
+      left: -3.7rem;
+
+      width: 1.1rem;
+      height: 1.1rem;
+
+      box-shadow: 0px 1px 4px rgba(255, 104, 0, 0.53);
+    }
+
+    @include breakpoint($sm-bp) {
+      left: -4.6rem;
+    }
   }
 }
 
@@ -123,10 +236,18 @@
   color: white;
 
   margin-bottom: 0.8rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+  }
 }
 
 .pw-item__descr {
   color: white;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 
   a {
     color: white;
@@ -143,6 +264,10 @@
 
   padding: 12rem 0;
 
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0 6.5rem;
+  }
+
   .section-heading {
     margin-bottom: 3.6rem;
   }
@@ -156,6 +281,10 @@
   display: grid;
   grid-template-columns: repeat(2, 48rem);
   gap: 2.4rem 12rem;
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .partnership-clients {
@@ -163,8 +292,16 @@
 
   background: linear-gradient(180deg, #fff4e7 0%, rgba(255, 244, 231, 0) 100%);
 
+  @include breakpoint($sm-bp) {
+    padding: 9rem 0 5rem;
+  }
+
   .wave-wrapper {
     display: block;
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 }
 
@@ -172,4 +309,10 @@
   padding: 12rem 0;
 
   background: #edecf3;
+
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0;
+
+    background: none;
+  }
 }

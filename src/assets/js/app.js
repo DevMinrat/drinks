@@ -251,10 +251,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (clients) {
+    let imgsLineWidth = document.querySelector(".clients-top").scrollWidth;
+    let scrollingVar = document.documentElement.clientWidth - imgsLineWidth;
+
     const clientsTopFT = gsap.fromTo(
       ".clients-top",
       {
-        x: -1340,
+        x: scrollingVar,
       },
       {
         x: 0,
@@ -267,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
         x: 0,
       },
       {
-        x: -1340,
+        x: scrollingVar,
         ease: "none",
       }
     );
@@ -412,5 +415,71 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("contacts-form__select"),
       { searchEnabled: false, itemSelectText: "" }
     );
+  }
+
+  if (document.querySelector(".about-trust")) {
+    let imgsLineWidth = document.querySelector(".about-trust__top").scrollWidth;
+    let scrollingVar = document.documentElement.clientWidth - imgsLineWidth;
+    gsapMM.add("(max-width: 920px)", () => {
+      const aboutTrustTopFT = gsap.fromTo(
+        ".about-trust__top",
+        {
+          x: scrollingVar,
+        },
+        {
+          x: 0,
+          ease: "none",
+        }
+      );
+      const aboutTrustBottomFT = gsap.fromTo(
+        ".about-trust__bottom",
+        {
+          x: 0,
+        },
+        {
+          x: scrollingVar,
+          ease: "none",
+        }
+      );
+      let clientsTopST = ScrollTrigger.create({
+        trigger: ".about-trust__inner",
+        start: "100 bottom",
+        end: "bottom top",
+        scrub: 1.5,
+        animation: aboutTrustTopFT,
+      });
+      let clientsBottomST2 = ScrollTrigger.create({
+        trigger: ".about-trust__inner",
+        start: "100 bottom",
+        end: "bottom top",
+        scrub: 1.5,
+        animation: aboutTrustBottomFT,
+      });
+    });
+  }
+
+  // modal functional
+
+  const modalTriggers = document.querySelectorAll("[data-modal]");
+
+  if (modalTriggers.length > 0) {
+    modalTriggers.forEach((el) => {
+      el.addEventListener("click", () => {
+        let modalName = el.dataset.modal;
+        let modal = document.querySelector(`[data-name='${modalName}']`);
+
+        modal.classList.remove("hide");
+      });
+    });
+  }
+
+  const modals = document.querySelectorAll(".modal");
+
+  if (modals.length > 0) {
+    modals.forEach((el) => {
+      el.querySelector("[data-close]").addEventListener("click", () => {
+        el.classList.add("hide");
+      });
+    });
   }
 });

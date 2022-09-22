@@ -1,8 +1,16 @@
 .delivery {
   padding-bottom: 10rem;
 
+  @include breakpoint($sm-bp) {
+    padding-bottom: 7rem;
+  }
+
   .page-title {
     margin-bottom: 3.2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 2.3rem;
+    }
   }
 }
 
@@ -11,6 +19,10 @@
   max-width: 68.5rem;
 
   margin-bottom: 6rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3.2rem;
+  }
 }
 
 .delivery-header__title {
@@ -18,9 +30,19 @@
   font-size: 2.2rem;
 
   margin-bottom: 1.6rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 1.8rem;
+  }
 }
 
 .delivery-header__descr {
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
+
   a {
     color: $primary;
     font-weight: 700;
@@ -34,10 +56,18 @@
 .delivery-section {
   & + & {
     margin-top: 6rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 3.2rem;
+    }
   }
 
   .section-heading {
     margin-bottom: 2.4rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 1.6rem;
+    }
   }
 }
 
@@ -45,6 +75,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.6rem 3.2rem;
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .delivery-section__item-title {
@@ -52,6 +86,18 @@
   font-size: 2.2rem;
 
   margin-bottom: 1.6rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 1.2rem;
+  }
+}
+
+.delivery-section__item-descr {
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }
 
 .delivery-section__item {
@@ -59,4 +105,8 @@
 
   border: 1px solid #595187;
   border-radius: 1.6rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 1.6rem;
+  }
 }

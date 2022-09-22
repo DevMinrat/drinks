@@ -202,8 +202,9 @@ function watchFiles() {
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
-const start = gulp.series(cleanWithoutImg, gulp.parallel(html, css, js, fonts));
-const watch = gulp.parallel(start, watchFiles, serve);
+// const start = gulp.series(cleanWithoutImg, gulp.parallel(html, css, js, fonts));
+// const watch = gulp.parallel(start, watchFiles, serve);
+const watch = gulp.parallel(build, watchFiles, serve);
 
 /* Exports Tasks */
 exports.html = html;
@@ -215,5 +216,5 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
-exports.cleanWithoutImg = cleanWithoutImg
-exports.start = start
+// exports.cleanWithoutImg = cleanWithoutImg
+// exports.start = start

@@ -26,6 +26,10 @@
     text-align: center;
 
     margin: 0 auto 2.6rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.4rem;
+    }
   }
 
   .wave-wrapper {

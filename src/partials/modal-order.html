@@ -1,0 +1,36 @@
+<div class="modal-order modal hide" data-name="order">
+    <div class="modal-order__inner">
+        <span class="modal-close-btn" data-close>
+            <svg>
+                <use href="#cross"></use>
+            </svg>
+        </span>
+        <h2 class="section-heading">ОБратная связь</h2>
+        <form class="modal-order__form">
+            <div class="order-item">
+                <p class="order-item__name req">Введите ваше имя</p>
+                <input class="order-item__input" type="text" placeholder="Иванов Иван" required>
+            </div>
+            <div class="order-item">
+                <p class="order-item__name req">Введите ваш E-mail</p>
+                <input class="order-item__input" type="email" placeholder="example@mail.ru" required>
+            </div>
+            <div class="order-item">
+                <p class="order-item__name req">Телефон</p>
+                <input class="order-item__input" type="tel" placeholder="+7 (928) 123 45 67" required>
+            </div>
+            <div class="order-privacy">
+                <input class="custom-checkbox" type="checkbox" id="modal-order-privacy" name="modal-order-privacy"
+                    value="red">
+                <label for="modal-order-privacy">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
+                    персональных данных.</label>
+            </div>
+            <button class="order-submit filled-btn" type="submit">
+                Отправить
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>

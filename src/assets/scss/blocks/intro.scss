@@ -3,10 +3,13 @@
 
   height: 100vh;
 
-  @include breakpoint($sm-bp) {
-    min-height: 75rem;
+  @include breakpoint($lg-bp) {
+    min-height: 78rem;
+  }
 
+  @include breakpoint($sm-bp) {
     padding-bottom: 5.6rem;
+    max-height: 90rem;
   }
 }
 
@@ -497,7 +500,7 @@
 
 .intro-slider__navs {
   position: absolute;
-  top: 82vh;
+  bottom: 10%;
   left: 60%;
   z-index: 22;
 
@@ -511,7 +514,7 @@
   }
 
   @include breakpoint($sm-bp) {
-    top: 58%;
+    bottom: 35%;
 
     gap: 1.6rem;
   }

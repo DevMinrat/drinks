@@ -68,6 +68,7 @@
   outline: none;
   background-color: transparent;
   border-bottom: 1px solid #9c97ba;
+  border-radius: 0;
 
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
@@ -93,9 +94,14 @@
   font-size: 2rem;
 
   border: none;
+  border-radius: 0;
   outline: none;
   background-color: transparent;
   border-bottom: 1px solid #9c97ba;
+
+  @include breakpoint($lg-bp) {
+    min-height: 15rem;
+  }
 
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
@@ -143,6 +149,7 @@
   display: inline-flex;
   align-items: center;
   user-select: none;
+  cursor: pointer;
 
   color: #9c97ba;
 }

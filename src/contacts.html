@@ -32,7 +32,7 @@ title: Contacts
                 </div>
                 <div class="contacts-info__item">
                     <p class="contacts-info__item-prop">График работы:</p>
-                    <p class="contacts-info__item-value">Понедельник – Пятница: с 09:00 до 19:00</p>
+                    <p class="contacts-info__item-value">Понедельник – Пятница: <br> с 09:00 до 19:00</p>
                 </div>
             </div>
         </div>
@@ -63,6 +63,8 @@ title: Contacts
                         <option value="">Выберите тему обращения</option>
                         <option value="t1">Тема один</option>
                         <option value="t2">Тема обращения 2</option>
+                        <option value="t3">Внешнеэкономическая деятельность</option>
+                        <option value="t4">Маркетплейсы</option>
                     </select>
                 </div>
             </div>
@@ -72,12 +74,13 @@ title: Contacts
                     <textarea class="order-item__textarea" placeholder="Введите ваше сообщение"></textarea>
                 </div>
                 <div class="order-privacy">
-                    <input class="custom-checkbox" type="checkbox" id="footer-privacy" name="footer-privacy"
-                        value="red">
-                    <label for="footer-privacy">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
+                    <input class="custom-checkbox" type="checkbox" id="contacts-order-privacy"
+                        name="contacts-order-privacy" value="red">
+                    <label for="contacts-order-privacy">Нажимая кнопку «Отправить», я даю свое согласие на обработку
+                        моих
                         персональных данных.</label>
                 </div>
-                <button class="footer-order__btn order-submit filled-btn" type="submit">
+                <button class="order-submit filled-btn" type="submit">
                     Отправить
                     <svg>
                         <use href="#arrow"></use>

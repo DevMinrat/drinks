@@ -1,11 +1,23 @@
 .vacancies {
   padding-bottom: 10rem;
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 7rem;
+  }
 }
 
 .vacancies__inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.2rem 3.1rem;
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .vacancies-item {
@@ -13,6 +25,10 @@
 
   border: 1px solid #595187;
   border-radius: 1.6rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 2.4rem;
+  }
 }
 
 .vacancies-item__name {
@@ -20,9 +36,17 @@
   font-size: 2.2rem;
 
   margin-bottom: 1.6rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
 }
 
 .vacancies-item__link {
   color: $accent;
   text-decoration: underline;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }

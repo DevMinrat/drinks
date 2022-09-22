@@ -16,7 +16,7 @@
     transform: translateY(-30rem);
   }
 
-  @include breakpoint($xl-bp) {
+  @include breakpoint($lg-bp) {
     display: none;
   }
 }
