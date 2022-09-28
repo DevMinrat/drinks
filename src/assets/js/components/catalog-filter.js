@@ -1,93 +1,60 @@
 // catalog page filtering
 
-const cpFilterTriggers = document.querySelectorAll(
-  ".cp-content__filter-trigger"
-);
+const brandsMobTrigger = document.querySelector(".cp-content__brands-trigger");
 
-if (cpFilterTriggers.length > 0) {
-  const filterList = document.querySelector(".filter-list__content");
-  const fiterCheckboxes = document.querySelectorAll(
-    ".cp-filter__modal-item .custom-checkbox"
-  );
-  const filterReset = document.querySelector(".cp-content__filter-reset");
+if (brandsMobTrigger) {
+  const brandsContent = document.querySelector(".cp-filter__brands");
+  const brandsMoreBtn = document.querySelector(".cp-content__more-btn");
 
-  cpFilterTriggers.forEach((el) => {
-    el.addEventListener("click", () => {
-      el.classList.toggle("active");
-      el.nextElementSibling.classList.toggle("active");
-    });
+  brandsMobTrigger.addEventListener("click", (e) => {
+    if (window.innerWidth <= 500) {
+      brandsMobTrigger.classList.toggle("active");
+      brandsContent.classList.toggle("active");
+    }
   });
 
-  function showFilterReset() {
-    if (document.querySelectorAll(".filter-list__item").length === 0) {
-      filterReset.style.display = "none";
-    } else {
-      filterReset.style.display = "";
+  brandsMoreBtn.addEventListener("click", (e) => {
+    brandsContent.classList.toggle("show-more");
+    e.target.classList.add("hide");
+  });
+}
+
+// brands filter
+
+const allProductsCheckbox = document.querySelector("#all");
+const productsCheckboxes = document.querySelectorAll(".cb-filter-checkbox");
+
+if (allProductsCheckbox) {
+  allProductsCheckbox.addEventListener("click", (e) => {
+    console.log(e.target.checked);
+
+    if (allProductsCheckbox.checked) {
+      allProductsCheckbox.disabled = true;
     }
-  }
-  showFilterReset();
 
-  function createFilterItem(name) {
-    let filterItem = document.createElement("div");
-    filterItem.classList.add("filter-list__item");
-    filterItem.dataset.name = name;
-    filterItem.innerHTML = ` <p class="filter-list__item-name">${name}</p>
-    <svg class="filter-list__item-close">
-        <use href="#cross"></use>
-    </svg>`;
+    if (allProductsCheckbox.checked) {
+      productsCheckboxes.forEach((el) => {
+        el.checked = false;
+      });
+    }
 
-    filterItem.addEventListener("click", (e) => {
-      let target = e.target;
-      if (
-        target.classList.contains("filter-list__item-close") ||
-        target.nodeName === "use"
-      ) {
-        filterItem.remove();
-        document.querySelector(`[name='${name}']`).checked = false;
-        showFilterReset();
-      }
-    });
+    console.log(e.target.checked);
+  });
 
-    filterList.append(filterItem);
-
-    showFilterReset();
-  }
-
-  function removeFilterItem(name) {
-    let item = document.querySelector(`[data-name='${name}']`);
-
-    item.remove();
-    showFilterReset();
-  }
-
-  fiterCheckboxes.forEach((el) => {
+  productsCheckboxes.forEach((el) => {
     el.addEventListener("change", () => {
       if (el.checked) {
-        createFilterItem(el.value);
-      } else {
-        removeFilterItem(el.value);
+        allProductsCheckbox.checked = false;
+        allProductsCheckbox.disabled = false;
+      }
+
+      let isproductsChecked = document.querySelectorAll(
+        "input.cb-filter-checkbox:checked"
+      );
+
+      if (isproductsChecked.length === 0) {
+        allProductsCheckbox.checked = true;
       }
     });
-  });
-
-  filterReset.addEventListener("click", () => {
-    filterList.innerHTML = "";
-    showFilterReset();
-  });
-
-  // mob version
-
-  const filterMobTrigger = document.querySelector(".cp-content__header-mob");
-  const filterContent = document.querySelector(".cp-content__filter-item");
-  const filterMobBack = document.querySelector(".filter-mob__header-back");
-
-  filterMobTrigger.addEventListener("click", () => {
-    filterContent.classList.add("active");
-    header.classList.remove("top");
-    scrollLock.disablePageScroll();
-  });
-  filterMobBack.addEventListener("click", () => {
-    filterContent.classList.remove("active");
-    scrollLock.enablePageScroll();
   });
 }

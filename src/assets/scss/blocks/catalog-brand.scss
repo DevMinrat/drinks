@@ -1,0 +1,66 @@
+.cp-content__filter {
+  margin-bottom: 7rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3rem;
+  }
+}
+
+.cp-content__filter-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 130%;
+  color: $primary;
+
+  margin-bottom: 2.7rem;
+}
+
+.cp-content__filter-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1.4rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+
+    padding-bottom: 2rem;
+
+    overflow-x: auto;
+  }
+}
+
+.cp-content__filter-item {
+  flex-shrink: 0;
+
+  border-radius: 4rem;
+
+  .custom-checkbox + label {
+    color: $primary;
+
+    padding: 1.2rem 1.3rem;
+
+    border: 1px solid $primary;
+    border-radius: 4rem;
+
+    &:hover {
+      background-color: $primary;
+      color: white;
+
+      @include breakpoint($sm-bp) {
+        background-color: unset;
+        color: $primary;
+      }
+    }
+  }
+
+  .custom-checkbox:checked + label {
+    background-color: $primary;
+    color: white;
+  }
+
+  .custom-checkbox + label::before {
+    display: none;
+  }
+}
