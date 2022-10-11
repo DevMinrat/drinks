@@ -125,19 +125,19 @@ document.addEventListener("DOMContentLoaded", () => {
       switch (idx) {
         case 0:
           introBg.classList.add("ibg-chups");
-          introBg.classList.remove("ibg-cola", "ibg-fanta", "ibg-pepper");
+          introBg.classList.remove("ibg-cola", "ibg-pepper", "ibg-lotte");
           break;
         case 1:
           introBg.classList.add("ibg-cola");
-          introBg.classList.remove("ibg-chups", "ibg-fanta", "ibg-pepper");
+          introBg.classList.remove("ibg-chups", "ibg-pepper", "ibg-lotte");
           break;
         case 2:
-          introBg.classList.add("ibg-fanta");
+          introBg.classList.add("ibg-lotte");
           introBg.classList.remove("ibg-cola", "ibg-chups", "ibg-pepper");
           break;
         case 3:
           introBg.classList.add("ibg-pepper");
-          introBg.classList.remove("ibg-cola", "ibg-fanta", "ibg-chups");
+          introBg.classList.remove("ibg-cola", "ibg-chups", "ibg-lotte");
           break;
         default:
           break;
@@ -191,6 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  setIntroBg(2);
 
   // popular svg animation
 

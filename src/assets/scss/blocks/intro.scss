@@ -35,8 +35,8 @@
   &.ibg-cola {
     background-image: url(../images/intro/cola/cola-bg.jpg);
   }
-  &.ibg-fanta {
-    background-image: url(../images/intro/chupa-chups/chupa-chups-bg.jpg);
+  &.ibg-lotte {
+    background-image: url(../images/intro/lotte/lotte-bg.jpg);
   }
   &.ibg-pepper {
     background-image: url(../images/intro/cola/cola-bg.jpg);
@@ -140,19 +140,27 @@
   z-index: 10;
 
   transform: rotate(12deg);
-  animation: animateBottle 6s ease infinite alternate;
+  animation: animateBottleRight 6s ease infinite alternate;
 
   @include breakpoint($sm-bp) {
     max-width: 20rem;
   }
 }
 
-@keyframes animateBottle {
+@keyframes animateBottleRight {
   0% {
     transform: translate(0rem, 0rem) rotate(12deg);
   }
   100% {
     transform: translate(1rem, 1rem) rotate(14deg);
+  }
+}
+@keyframes animateBottleLeft {
+  0% {
+    transform: translate(0rem, 0rem) rotate(-12deg);
+  }
+  100% {
+    transform: translate(-1rem, -1rem) rotate(-14deg);
   }
 }
 
@@ -373,6 +381,8 @@
   }
 }
 
+/// cola
+
 .smoke-big {
   // width: 108.4rem;
   // height: 92rem;
@@ -478,6 +488,100 @@
     left: 92%;
   }
 }
+
+///// lotte
+
+.lotte-aloe {
+  width: 100%;
+  max-width: 33.8vh;
+
+  position: absolute;
+
+  top: 12%;
+  left: 24%;
+
+  @include breakpoint($sm-bp) {
+    width: 6.4rem;
+    height: 8.4rem;
+
+    top: 45%;
+    left: 62%;
+  }
+}
+.lotte-waves {
+  width: 91.4vh;
+
+  position: absolute;
+
+  bottom: 10%;
+  left: -8%;
+}
+.lotte-lBottle {
+  width: 20.8vh;
+
+  position: absolute;
+
+  bottom: 30%;
+  left: 10%;
+
+  transform: rotate(-13.77deg);
+
+  animation: animateBottleLeft 6s ease infinite alternate;
+}
+.lotte-rBottle {
+  width: 19.3vh;
+
+  position: absolute;
+
+  bottom: 25%;
+  left: 53%;
+
+  transform: rotate(15.95deg);
+
+  animation: animateBottleRight 6s ease infinite alternate;
+}
+.aloe-parts {
+  width: 36.7vh;
+  height: 94.9vh;
+
+  top: 3%;
+  left: 5%;
+
+  background: url(../images/intro/lotte/aloe-parts.png) no-repeat;
+  background-size: cover;
+}
+.strawb-part {
+  width: 14.1vh;
+  height: 13.6vh;
+
+  top: 72%;
+  left: 5%;
+
+  background: url(../images/intro/lotte/lotte-strawberry-part.png) no-repeat;
+  background-size: cover;
+}
+.water-big {
+  width: 54.9vh;
+  height: 54.9vh;
+
+  top: 36%;
+  left: 10%;
+
+  background: url(../images/intro/lotte/splashing-water-bg.png) no-repeat;
+  background-size: cover;
+}
+.water-sm {
+  width: 28.9vh;
+  height: 28.9vh;
+
+  top: 61%;
+  left: -6%;
+
+  background: url(../images/intro/lotte/splashing-water-sm.png) no-repeat;
+  background-size: cover;
+}
+
+///// common styles
 
 .l1 {
   z-index: 1;
