@@ -125,19 +125,48 @@ document.addEventListener("DOMContentLoaded", () => {
       switch (idx) {
         case 0:
           introBg.classList.add("ibg-chups");
-          introBg.classList.remove("ibg-cola", "ibg-pepper", "ibg-lotte");
+          introBg.classList.remove(
+            "ibg-cola",
+            "ibg-pepper",
+            "ibg-lotte",
+            "ibg-abrau"
+          );
           break;
         case 1:
           introBg.classList.add("ibg-cola");
-          introBg.classList.remove("ibg-chups", "ibg-pepper", "ibg-lotte");
+          introBg.classList.remove(
+            "ibg-chups",
+            "ibg-pepper",
+            "ibg-lotte",
+            "ibg-abrau"
+          );
           break;
         case 2:
           introBg.classList.add("ibg-lotte");
-          introBg.classList.remove("ibg-cola", "ibg-chups", "ibg-pepper");
+          introBg.classList.remove(
+            "ibg-cola",
+            "ibg-chups",
+            "ibg-pepper",
+            "ibg-abrau"
+          );
           break;
         case 3:
           introBg.classList.add("ibg-pepper");
-          introBg.classList.remove("ibg-cola", "ibg-chups", "ibg-lotte");
+          introBg.classList.remove(
+            "ibg-cola",
+            "ibg-chups",
+            "ibg-lotte",
+            "ibg-abrau"
+          );
+          break;
+        case 4:
+          introBg.classList.add("ibg-abrau");
+          introBg.classList.remove(
+            "ibg-cola",
+            "ibg-chups",
+            "ibg-lotte",
+            "ibg-pepper"
+          );
           break;
         default:
           break;
@@ -192,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  setIntroBg(2);
+  setIntroBg(4);
 
   // popular svg animation
 

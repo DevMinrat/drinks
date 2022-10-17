@@ -39,7 +39,10 @@
     background-image: url(../images/intro/lotte/lotte-bg.jpg);
   }
   &.ibg-pepper {
-    background-image: url(../images/intro/cola/cola-bg.jpg);
+    background-image: url(../images/intro/pepper/pepper-bg.jpg);
+  }
+  &.ibg-abrau {
+    background-image: url(../images/intro/abrau/abrau-bg.jpg);
   }
 }
 
@@ -501,11 +504,12 @@
   left: 24%;
 
   @include breakpoint($sm-bp) {
-    width: 6.4rem;
-    height: 8.4rem;
+    position: relative;
 
-    top: 45%;
-    left: 62%;
+    max-width: 15rem;
+
+    // top: 45%;
+    left: 2%;
   }
 }
 .lotte-waves {
@@ -515,6 +519,11 @@
 
   bottom: 10%;
   left: -8%;
+
+  @include breakpoint($sm-bp) {
+    width: 42.4rem;
+    bottom: 7%;
+  }
 }
 .lotte-lBottle {
   width: 20.8vh;
@@ -527,6 +536,12 @@
   transform: rotate(-13.77deg);
 
   animation: animateBottleLeft 6s ease infinite alternate;
+
+  @include breakpoint($sm-bp) {
+    width: 8rem;
+    bottom: 35%;
+    left: 21%;
+  }
 }
 .lotte-rBottle {
   width: 19.3vh;
@@ -539,6 +554,12 @@
   transform: rotate(15.95deg);
 
   animation: animateBottleRight 6s ease infinite alternate;
+
+  @include breakpoint($sm-bp) {
+    width: 8rem;
+    bottom: 30%;
+    left: 60%;
+  }
 }
 .aloe-parts {
   width: 36.7vh;
@@ -549,6 +570,13 @@
 
   background: url(../images/intro/lotte/aloe-parts.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 15.7rem;
+    height: 41.9rem;
+    top: -3%;
+    left: 10%;
+  }
 }
 .strawb-part {
   width: 14.1vh;
@@ -559,6 +587,15 @@
 
   background: url(../images/intro/lotte/lotte-strawberry-part.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    top: 65%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 6.1rem;
+    height: 6.6rem;
+  }
 }
 .water-big {
   width: 54.9vh;
@@ -569,6 +606,13 @@
 
   background: url(../images/intro/lotte/splashing-water-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 28rem;
+    height: 28rem;
+    top: 29%;
+    left: 13%;
+  }
 }
 .water-sm {
   width: 28.9vh;
@@ -579,7 +623,169 @@
 
   background: url(../images/intro/lotte/splashing-water-sm.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    top: 58%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 15rem;
+    height: 15rem;
+
+    top: 55%;
+  }
 }
+
+///// pepper
+
+.pepper-bottle {
+  width: 32vh;
+
+  position: absolute;
+
+  bottom: 20%;
+  left: 30%;
+
+  transform: rotate(-13.77deg);
+
+  animation: animateBottleRight 6s ease infinite alternate;
+
+  @include breakpoint($lg-bp) {
+    max-width: 25vh;
+  }
+
+  @include breakpoint($sm-bp) {
+    position: static;
+
+    max-width: 17rem;
+  }
+}
+
+.pepper-water_left {
+  width: 81vh;
+  height: 84vh;
+
+  top: 6%;
+  left: -29%;
+
+  background: url(../images/intro/pepper/water-left.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    width: 67vh;
+    height: 75vh;
+    top: 6%;
+    left: -80%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 50rem;
+    height: 50rem;
+    top: -25%;
+    left: -70%;
+  }
+}
+.pepper-water_right {
+  width: 58vh;
+  height: 80vh;
+
+  top: 20%;
+  left: 30%;
+
+  background: url(../images/intro/pepper/water-right.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    width: 50vh;
+    height: 70vh;
+    top: 20%;
+    left: 10%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 35rem;
+    height: 45rem;
+    top: -3%;
+    left: 10%;
+  }
+}
+.pepper-cherry {
+  width: 27vh;
+  height: 23vh;
+
+  top: 13%;
+  left: 0%;
+
+  background: url(../images/intro/pepper/cherry.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    width: 22vh;
+    height: 19vh;
+    top: 13%;
+    left: -22%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 15rem;
+    height: 14rem;
+    top: -4%;
+    left: -12%;
+  }
+}
+.pepper-cherry_part {
+  width: 30vh;
+  height: 31vh;
+
+  top: 32%;
+  left: 57%;
+
+  background: url(../images/intro/pepper/cherry-part.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 20rem;
+    height: 20rem;
+    top: 27%;
+    left: 60%;
+  }
+}
+.pepper-cherry_double {
+  width: 25vh;
+  height: 25vh;
+
+  top: 12%;
+  left: 63%;
+
+  background: url(../images/intro/pepper/cherry-double.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 15rem;
+    height: 15rem;
+    top: -16%;
+    left: 65%;
+  }
+}
+.pepper-cherry_big {
+  width: 30vh;
+  height: 35vh;
+
+  top: 70%;
+  left: 70%;
+
+  background: url(../images/intro/pepper/cherry-big.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 10rem;
+    height: 15rem;
+    top: 76%;
+    left: 78%;
+  }
+}
+
+///// abrau
 
 ///// common styles
 
