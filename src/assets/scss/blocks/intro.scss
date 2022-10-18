@@ -169,6 +169,7 @@
 
 .star-link {
   position: relative;
+  z-index: 6;
 
   display: flex;
   align-items: center;
@@ -786,6 +787,180 @@
 }
 
 ///// abrau
+
+.abrau-bottle {
+  width: 22vh;
+
+  position: absolute;
+
+  bottom: 20%;
+  left: 50%;
+
+  transform: rotate(-13.77deg);
+
+  animation: animateBottleRight 6s ease infinite alternate;
+
+  @include breakpoint($lg-bp) {
+    width: 18rem;
+
+    left: 25%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 15rem;
+
+    position: static;
+  }
+}
+.abrau-grape {
+  width: 45vh;
+  height: 45vh;
+
+  top: 32%;
+  left: 25%;
+
+  background: url(../images/intro/abrau/grape-big.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    left: -10%;
+  }
+  @include breakpoint($sm-bp) {
+    width: 35rem;
+    height: 35rem;
+  }
+}
+.abrau-grape_md {
+  width: 14vh;
+  height: 16vh;
+
+  top: 23%;
+  left: 46%;
+
+  background: url(../images/intro/abrau/grape-md.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    left: -10%;
+  }
+  @include breakpoint($sm-bp) {
+    width: 10rem;
+    height: 12rem;
+  }
+}
+.abrau-grape_part {
+  width: 13vh;
+  height: 20vh;
+
+  top: 57%;
+  left: 66%;
+
+  background: url(../images/intro/abrau/grape-part.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 10rem;
+    height: 15rem;
+  }
+}
+.abrau-grape_sm {
+  width: 10vh;
+  height: 11vh;
+
+  top: 27%;
+  left: 78%;
+
+  background: url(../images/intro/abrau/grape-sm.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 7rem;
+    height: 8rem;
+  }
+}
+.abrau-bubbles_single {
+  width: 28vh;
+  height: 86vh;
+
+  top: 13%;
+  left: 50%;
+
+  background: url(../images/intro/abrau/bubbles-single.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 23rem;
+    height: 70rem;
+
+    left: 38%;
+  }
+}
+.abrau-bubbles_double {
+  width: 46vh;
+  height: 73vh;
+
+  top: 25%;
+  left: 20%;
+
+  background: url(../images/intro/abrau/bubbles-double.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    left: -10%;
+  }
+  @include breakpoint($sm-bp) {
+    width: 40rem;
+    height: 60rem;
+  }
+}
+.abrau-leaf_left {
+  width: 20vh;
+  height: 20vh;
+
+  top: 7%;
+  left: 20%;
+
+  background: url(../images/intro/abrau/grape-leaf-left.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 15rem;
+    height: 15rem;
+
+    left: 0;
+    top: 0;
+  }
+}
+.abrau-leaf_right {
+  width: 16vh;
+  height: 20vh;
+
+  top: 4%;
+  left: 83%;
+
+  background: url(../images/intro/abrau/grape-leaf-right.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 13rem;
+    height: 18rem;
+  }
+}
+.abrau-leaf_big {
+  width: 31vh;
+  height: 43vh;
+
+  top: 62%;
+  left: 70%;
+
+  background: url(../images/intro/abrau/grape-leaf-big.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    width: 25rem;
+    height: 35rem;
+  }
+}
 
 ///// common styles
 
